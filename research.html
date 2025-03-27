@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - DNA Storage Lab</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 5px;
+        }
+        h2 {
+            font-size: 1.5em;
+            color: #555;
+            font-weight: normal;
+            margin-top: 0;
+        }
+        nav {
+            text-align: center;
+            padding: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #555;
+            font-weight: bold;
+            position: relative;
+        }
+        nav a:hover {
+            color: #000;
+        }
+        nav a::before {
+            content: '•';
+            margin-right: 10px;
+            color: #999;
+        }
+        nav a:first-child::before {
+            content: '';
+            margin-right: 0;
+        }
+        .divider {
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+        }
+        .research-section {
+            margin: 30px 0;
+        }
+        .research-area {
+            margin-bottom: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .research-area:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .research-text {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+        .research-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+            padding: 20px;
+        }
+        .research-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .research-title {
+            font-size: 1.8em;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+        .research-description {
+            text-align: justify;
+        }
+        .research-highlights {
+            margin-top: 20px;
+            padding-left: 20px;
+        }
+        .research-highlights li {
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+            border-top: 1px solid #ddd;
+            color: #777;
+        }
+        @media (max-width: 768px) {
+            .research-area, .research-area:nth-child(even) {
+                flex-direction: column;
+            }
+            .research-text, .research-image {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>DNA Storage Lab</h1>
+            <h2>BGI Research</h2>
+        </header>
+        
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="people.html">People</a>
+            <a href="research.html">Research</a>
+            <a href="publications.html">Publications</a>
+            <a href="media.html">Media</a>
+        </nav>
+        
+        <div class="divider"></div>
+        
+        <div class="research-section">
+            <h2>Research Areas</h2>
+            <p>Our laboratory focuses on cutting-edge research in DNA molecular storage and DNA nanotechnology, dedicated to exploring the potential of DNA as an information storage medium and developing innovative storage technologies based on DNA nanostructures.</p>
+            
+            <div class="research-area">
+                <div class="research-text">
+                    <h3 class="research-title">DNA Data Storage Systems</h3>
+                    <div class="research-description">
+                        <p>DNA molecules offer advantages as information storage media, including high storage density, excellent stability, and low energy consumption. We are committed to developing efficient and reliable DNA data storage systems, researching end-to-end technologies from encoding algorithms to information retrieval.</p>
+                        <ul class="research-highlights">
+                            <li>Development of extended alphabet DNA storage systems based on 5-methylcytosine to increase information storage density</li>
+                            <li>Design of efficient DNA encoding algorithms to optimize data conversion efficiency</li>
+                            <li>Research on DNA Bloom Filter technology for contamination resistance and file version control</li>
+                            <li>Development of DNA data reading technology based on nanopore sequencing</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="research-image">
+                    <img src="images/DNA存储.png" alt="DNA数据存储系统示意图">
+                </div>
+            </div>
+            
+
+            
+            <div class="research-area">
+                <div class="research-text">
+                    <h3 class="research-title">Applications of DNA Nanotechnology in Storage</h3>
+                    <div class="research-description">
+                        <p>We study the application of DNA nanostructures in information storage, enhancing storage density and reading efficiency through precise design of DNA molecular spatial structures, advancing the practical development of DNA storage technology.</p>
+                        <ul class="research-highlights">
+                            <li>Development of high-density information encoding technology based on DNA origami</li>
+                            <li>Research on stability and controllability of DNA nanostructures</li>
+                            <li>Development of rapid information retrieval systems based on DNA nanotechnology</li>
+                            <li>Exploration of DNA nanostructures in long-term storage applications</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="research-image">
+                    <img src="images/DNA纳米结构.png" alt="DNA纳米结构示意图">
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2024 DNA Storage Lab | BGI Research</p>
+            <p>Address: Beishan Industrial Zone, Yantian District, Shenzhen</p>
+        </footer>
+    </div>
+</body>
+</html>

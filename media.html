@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media - DNA Storage Lab</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 5px;
+        }
+        h2 {
+            font-size: 1.5em;
+            color: #555;
+            font-weight: normal;
+            margin-top: 0;
+        }
+        nav {
+            text-align: center;
+            padding: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #555;
+            font-weight: bold;
+            position: relative;
+        }
+        nav a:hover {
+            color: #000;
+        }
+        nav a::before {
+            content: '•';
+            margin-right: 10px;
+            color: #999;
+        }
+        nav a:first-child::before {
+            content: '';
+            margin-right: 0;
+        }
+        .divider {
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+        }
+        .media-section {
+            margin: 30px 0;
+        }
+        /* Combined category styling */
+        .media-category, .video-section {
+            margin-bottom: 40px;
+        }
+        /* Combined grid styling */
+        .media-grid, .video-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjusted min-width slightly */
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        /* News Item Card Styling */
+        .media-item {
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            /* cursor: pointer; /* Remove if link button is the main interaction */
+            text-decoration: none;
+            color: inherit;
+            display: flex; /* Use flexbox for layout */
+            flex-direction: column;
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            height: 100%; /* Ensure cards align height */
+        }
+        .media-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border-color: #d0e8ff;
+        }
+        .media-image {
+            width: 100%;
+            height: 180px; /* Adjusted height */
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .media-image svg { /* Placeholder style */
+            width: 45%; /* Adjusted size */
+            height: 45%;
+            opacity: 0.6;
+        }
+        .media-image img { /* Real image style */
+             width: 100%;
+             height: 100%;
+             object-fit: cover;
+        }
+        .media-info {
+            padding: 20px;
+            position: relative;
+            flex-grow: 1; /* Allow info to take space */
+            display: flex;
+            flex-direction: column;
+        }
+        .media-type {
+            display: inline-block;
+            background-color: #e8f4fc;
+            color: #3498db;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.8em; /* Slightly smaller */
+            margin-bottom: 10px; /* Adjusted spacing */
+            font-weight: 500;
+            align-self: flex-start; /* Align tag to start */
+        }
+        .media-title {
+            font-size: 1.15em; /* Adjusted size */
+            font-weight: 600;
+            margin-bottom: 8px; /* Adjusted spacing */
+            color: #2c3e50;
+            line-height: 1.4;
+        }
+        .media-source {
+            color: #7f8c8d;
+            /* font-style: italic; */ /* Removed italic */
+            margin-bottom: 15px; /* Space before button */
+            font-size: 0.9em; /* Adjusted size */
+            display: flex;
+            align-items: center;
+            flex-grow: 1; /* Push source down if title is short */
+        }
+        .media-source:before { /* Decorative dot */
+            content: '';
+            display: inline-block;
+            width: 5px; /* Slightly bigger dot */
+            height: 5px;
+            background-color: #bdc3c7; /* Muted color */
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        .media-link { /* Link Button */
+            display: inline-block;
+            background-color: #3498db;
+            color: white !important; /* Ensure white text */
+            padding: 8px 18px;
+            border-radius: 20px;
+            text-decoration: none !important; /* Ensure no underline */
+            font-size: 0.85em; /* Adjusted size */
+            transition: all 0.3s ease;
+            font-weight: 500;
+            margin-top: auto; /* Push button to bottom */
+            box-shadow: 0 4px 6px rgba(52, 152, 219, 0.2);
+            align-self: flex-start; /* Align button to start */
+            border: none; /* Ensure no button border */
+            cursor: pointer;
+        }
+        .media-link:hover {
+            background-color: #2980b9;
+            box-shadow: 0 6px 10px rgba(52, 152, 219, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Video Item Styling */
+        /* Video container already styled above */
+        .video-item-link { /* Make the whole video item a link */
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            overflow: hidden;
+            display: block; /* Make link a block */
+            text-decoration: none;
+            color: inherit;
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+             height: 100%; /* Ensure cards align height */
+             display: flex;
+             flex-direction: column;
+        }
+         .video-item-link:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border-color: #d0e8ff;
+        }
+        .video-placeholder {
+            width: 100%;
+            height: 180px; /* Consistent height */
+            background-color: #34495e; /* Darker background for video */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .video-placeholder svg { /* Play icon */
+            width: 55px; /* Larger icon */
+            height: 55px;
+            opacity: 0.8;
+            fill: #ffffff; /* White icon */
+            transition: transform 0.3s ease;
+        }
+        .video-item-link:hover .video-placeholder svg {
+             transform: scale(1.1); /* Scale icon on hover */
+        }
+        /* Removed ::after pseudo-element for simplicity */
+        .video-info {
+            padding: 20px;
+             flex-grow: 1; /* Allow info to take space */
+            display: flex;
+            flex-direction: column;
+        }
+        .video-title { /* Consistent title style */
+            font-size: 1.15em;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            line-height: 1.4;
+        }
+        .video-source { /* Using '杂志社' as source for video too */
+            color: #7f8c8d;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+            margin-top: auto; /* Push to bottom */
+            padding-top: 10px;
+        }
+         .video-source:before { /* Re-use dot style */
+            content: '';
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            background-color: #bdc3c7;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        /* Removed .video-date as it's not in JSON */
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+            border-top: 1px solid #ddd;
+            color: #777;
+        }
+        @media (max-width: 768px) {
+            .media-grid, .video-container {
+                grid-template-columns: 1fr; /* Single column */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>DNA Storage Lab</h1>
+            <h2>BGI Research</h2>
+        </header>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="people.html">People</a>
+            <a href="research.html">Research</a>
+            <a href="publications.html">Publications</a>
+            <a href="media.html">Media</a>
+        </nav>
+
+        <div class="divider"></div>
+
+        <div class="media-section">
+            <h2>Media Coverage</h2>
+            <p>Media reports and news about our lab's research.</p>
+
+            <div class="media-category">
+                <h3>News Reports</h3>
+                <div class="media-grid" id="mediaGrid">
+                    <!-- News items will be loaded here -->
+                </div>
+            </div>
+
+            <div class="video-section">
+                <h3>Video Reports</h3>
+                <div class="video-container" id="videoGrid"> <!-- Added ID here -->
+                    <!-- Video items will be loaded here -->
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2024 DNA Storage Lab | BGI Research</p>
+            <p>Address: BGI Building, Beishan Industrial Zone, Yantian District, Shenzhen</p>
+        </footer>
+    </div>
+
+    <!-- Removed external script tag -->
+    <script>
+        const mediaJsonData = `[
+            {
+              "类型": "新闻",
+              "Url": "https://www.genomics.cn/news/info_itemid_6653.html",
+              "标题": "细菌化身移动硬盘！北京大学携手华大集团开发便携式DNA数据存储系统",
+              "封面图片": null,
+              "杂志社": "华大集团"
+            },
+            {
+              "类型": "新闻",
+              "Url": "https://www.genomics.cn/news/info_itemid_6471.html",
+              "标题": "将全世界信息保存到百万年后，我们的神奇U盘在哪里？",
+              "封面图片": null,
+              "杂志社": "华大集团"
+            },
+            {
+              "类型": "新闻",
+              "Url": "https://www.sznews.com/news/content/mb/2022-04/27/content_25089117.htm",
+              "标题": "深圳科学家破解DNA存储技术世界性难题",
+              "封面图片": null,
+              "杂志社": "广州日报"
+            },
+            {
+              "类型": "新闻",
+              "Url": "https://mp.weixin.qq.com/s/o58FOu1d5noQdeWTUuZS8g",
+              "标题": "对话华大沈玥博士、平质博士：发力DNA合成底层关键技术，突破DNA数据存储应用瓶颈",
+              "封面图片": null,
+              "杂志社": "测序中国"
+            },
+            {
+              "类型": "视频",
+              "Url": "https://video.genomics.cn/891e6770a2a871edb74a0764a0fd0102/80d73efe299c4d1f85cbdbef787ab950-fb3385d345ac3be022c09098c51712d9-sd-nbv1.mp4",
+              "标题": "全球信息存储压力，“DNA”怎么破？",
+              "封面图片": null,
+              "杂志社": "华大集团"
+            }
+          ]`; // Combined JSON data
+
+        const mediaData = JSON.parse(mediaJsonData);
+
+        // --- Placeholder SVG Functions ---
+        function createNewsPlaceholderSvg(color = '#bdc3c7') { // Muted placeholder color
+            return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="${color}"><path d="M20 3H4C2.9 3 2 3.9 2 5v14c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H5V5h14v14z"/><path d="M7 7h10v2H7zm0 4h10v2H7zm0 4h7v2H7z"/></svg>`;
+        }
+
+        function createVideoPlaceholderSvg(color = '#ffffff') { // White play icon
+             return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="${color}"><path d="M8 5v14l11-7z"/></svg>`;
+        }
+
+        // --- Get Grid Containers ---
+        const newsGrid = document.getElementById('mediaGrid');
+        const videoGrid = document.getElementById('videoGrid'); // Get video grid
+
+        // --- Populate Grids ---
+        if (newsGrid && videoGrid) {
+            newsGrid.innerHTML = ''; // Clear news grid
+            videoGrid.innerHTML = ''; // Clear video grid
+
+            let newsCount = 0;
+            let videoCount = 0;
+
+            mediaData.forEach(item => {
+                const title = item['标题'] || 'Untitled';
+                const source = item['杂志社'] || 'Unknown Source';
+                const url = item['Url'];
+                const image = item['封面图片']; // Still null
+
+                if (item['类型'] === '新闻') {
+                    newsCount++;
+                    const imageHtml = image
+                        ? `<img src="${image}" alt="${title}">`
+                        : createNewsPlaceholderSvg();
+
+                    // News item structure using new CSS classes
+                    const cardHtml = `
+                        <div class="media-item">
+                            <div class="media-image">${imageHtml}</div>
+                            <div class="media-info">
+                                <span class="media-type">News</span>
+                                <div class="media-title">${title}</div>
+                                <div class="media-source">${source}</div>
+                                <a href="${url}" target="_blank" rel="noopener noreferrer" class="media-link">Read More</a>
+                            </div>
+                        </div>
+                    `;
+                    newsGrid.innerHTML += cardHtml;
+
+                } else if (item['类型'] === '视频') {
+                    videoCount++;
+                    // Video item structure using new CSS classes, wrapped in a link
+                     const cardHtml = `
+                        <a href="${url}" target="_blank" rel="noopener noreferrer" class="video-item-link">
+                            <div class="video-placeholder">
+                                ${createVideoPlaceholderSvg()}
+                            </div>
+                            <div class="video-info">
+                                 <span class="media-type">Video</span> 
+                                <div class="video-title">${title}</div>
+                                <div class="video-source">${source}</div> 
+                            </div>
+                        </a>
+                    `;
+                    videoGrid.innerHTML += cardHtml;
+                }
+            });
+
+            // Add messages if grids are empty
+            if (newsCount === 0) {
+                 newsGrid.innerHTML = '<p>No news reports found.</p>';
+            }
+            if (videoCount === 0) {
+                 videoGrid.innerHTML = '<p>No video reports found.</p>';
+            }
+
+        } else {
+            console.error("Required grid container(s) not found ('mediaGrid' or 'videoGrid').");
+        }
+    </script>
+
+</body>
+</html>

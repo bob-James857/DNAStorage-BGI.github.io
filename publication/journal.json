@@ -1,0 +1,524 @@
+[
+    {
+      "TY": "JOUR",
+      "AU": [
+        "Liu, Deruilin",
+        "Xu, Demin",
+        "Shi, Liuxin",
+        "Zhang, Jiayuan",
+        "Bi, Kewei",
+        "Luo, Bei",
+        "Liu, Chen",
+        "Li, Yuxiang",
+        "Fan, Guangyi",
+        "Wang, Wen",
+        "Ping, Zhi"
+      ],
+      "TI": "A practical DNA data storage using an expanded alphabet introducing 5-methylcytosine.",
+      "T2": "GigaByte (Hong Kong, China)",
+      "M3": "Journal Article",
+      "AB": "The DNA molecule is a promising next-generation data storage medium. Recently, it has been theoretically proposed that non-natural or modified bases can serve as extra molecular letters to increase the information density. However, this strategy is challenging due to the difficulty in synthesizing non-natural DNA sequences and their complex structure. Here, we described a practical DNA data storage transcoding scheme named R+ based on an expanded molecular alphabet that introduces 5-methylcytosine (5mC). We demonstrated its experimental validation by encoding one representative file into several 1.31.6 kbps in vitro DNA fragments for nanopore sequencing. Our results show an average data recovery rate of 98.97% and 86.91% with and without reference, respectively. Our work validates the practicability of 5mC in DNA storage systems, with a potentially wide range of applications.Availability and implementation: R+ is implemented in Python and the code is available under a MIT license at https://github.com/Incpink-Liu/DNA-storage-R_plus.",
+      "SN": [
+        "2709-4715"
+      ],
+      "DA": "2025 ",
+      "PY": "2025",
+      "VL": "2025",
+      "SP": "gigabyte147",
+      "EP": "gigabyte147",
+      "DO": "10.46471/gigabyte.147",
+      "AN": "MEDLINE:39906332",
+      "AD": [
+        "College of Life Sciences, University of Chinese Academy of Sciences, Beijing, 100049, China.",
+        "BGI Research, Shenzhen, 518083, China.",
+        "BGI Research, Beijing, 100101, China.",
+        "BGI Research, Hangzhou, 310030, China.",
+        "BGI Research, Changzhou, 213299, China.",
+        "Wuhan BGI Technology Service Co., Ltd., Wuhan, 430073, China.",
+        "HIM-BGI Omics Center, Hangzhou Institute of Medicine (HIM), Chinese Academy of Sciences, Hangzhou, 310030, China.",
+        "BGI Research, Qingdao, 266426, China.",
+        "School of Medicine, The Chinese University of Hong Kong, Shenzhen, Shenzhen, 518172, China."
+      ],
+      "Y2": "2025-02-07"
+    },
+    {
+      "TY": "JOUR",
+      "AU": [
+        "Zhang, Yu",
+        "Chiu, Tsan-Yu",
+        "Zhang, Jin-Tao",
+        "Wang, Shu-Jie",
+        "Wang, Shu-Wen",
+        "Liu, Long-Ying",
+        "Ping, Zhi",
+        "Wang, Yong",
+        "Chen, Ao",
+        "Zhang, Wen-Wei",
+        "Chen, Tai",
+        "Wang, Yun",
+        "Shen, Yue"
+      ],
+      "TI": "Systematical Engineering of Synthetic Yeast for Enhanced Production of Lycopene",
+      "T2": "BIOENGINEERING-BASEL",
+      "M3": "Article",
+      "AB": "Synthetic biology allows the re-engineering of biological systems and promotes the development of bioengineering to a whole new level, showing great potential in biomanufacturing. Here, in order to make the heterologous lycopene biosynthesis pathway compatible with the host strain YSy 200, we evolved YSy200 using a unique Synthetic Chromosome Rearrangement and Modification by LoxP-mediated Evolution (SCRaMbLE) system that is built in the Sc2.0 synthetic yeast. By inducing SCRaMbLE, we successfully identified a host strain YSy201 that can be served as a suitable host to maintain the heterologous lycopene biosynthesis pathway. Then, we optimized the lycopene biosynthesis pathway and further integrated into the rDNA arrays of YSy201 to increase its copy number. In combination with culturing condition optimization, we successfully screened out the final yeast strain YSy222, which showed a 129.5-fold increase of lycopene yield in comparison with its parental strain. Our work shows that, the strategy of combining the engineering efforts on both the lycopene biosynthesis pathway and the host strain can improve the compatibility between the heterologous pathway and the host strain, which can further effectively increase the yield of the target product.",
+      "PU": "MDPI",
+      "PI": "BASEL",
+      "PA": "ST ALBAN-ANLAGE 66, CH-4052 BASEL, SWITZERLAND",
+      "SN": [
+        "2306-5354"
+      ],
+      "DA": "2021 JAN",
+      "PY": "2021",
+      "VL": "8",
+      "IS": "1",
+      "C7": "14",
+      "DO": "10.3390/bioengineering8010014",
+      "AN": "WOS:000610960700001",
+      "AD": [
+        "Univ Chinese Acad Sci, BGI Educ Ctr, Shenzhen 518083, Peoples R China",
+        "BGI Shenzhen, Shenzhen 518083, Peoples R China",
+        "BGI Shenzhen, Guangdong Prov Key Lab Genome Read & Write, Shenzhen 518120, Peoples R China",
+        "BGI Shenzhen, Guangdong Prov Academician Workstat BGI Synthet G, Shenzhen 518120, Peoples R China",
+        "BGI Shenzhen, China Natl GeneBank, Jinsha Rd, Shenzhen 518120, Peoples R China",
+        "Chinese Acad Sci, Shenzhen Inst Adv Technol, Shenzhen Inst Synthet Biol, Shenzhen 518000, Peoples R China"
+      ],
+      "Y2": "2021-12-14"
+    },
+    {
+      "TY": "JOUR",
+      "AU": [
+        "Ping, Zhi",
+        "Yang, Huanming",
+        "Shen, Yue"
+      ],
+      "TI": "A new era of mass data storage in artificial chromosome",
+      "T2": "SCIENCE CHINA-LIFE SCIENCES",
+      "M3": "Editorial Material",
+      "PU": "SCIENCE PRESS",
+      "PI": "BEIJING",
+      "PA": "16 DONGHUANGCHENGGEN NORTH ST, BEIJING 100717, PEOPLES R CHINA",
+      "SN": [
+        "1674-7305",
+        "1869-1889"
+      ],
+      "DA": "2022 JUL",
+      "PY": "2022",
+      "VL": "65",
+      "IS": "7",
+      "SP": "1477",
+      "EP": "1478",
+      "DO": "10.1007/s11427-022-2073-3",
+      "AN": "WOS:000771853100001",
+      "C6": "MAR 2022",
+      "AD": [
+        "BGI Shenzhen, Shenzhen 518083, Peoples R China",
+        "BGI Shenzhen, Guangdong Prov Key Lab Genome Read & Write, Shenzhen 518120, Peoples R China",
+        "BGI Shenzhen, George Church Inst Regenesis, Shenzhen 518120, Peoples R China",
+        "Chinese Acad Sci, Shenzhen Inst Synthet Biol, Shenzhen Inst Adv Technol, Shenzhen 518055, Peoples R China"
+      ],
+      "Y2": "2022-03-30"
+    },
+    {
+      "TY": "JOUR",
+      "AU": [
+        "Xu, Xiaoyuan",
+        "Wang, Wen",
+        "Ping, Zhi"
+      ],
+      "TI": "Biotechnological tools boost the functional diversity of DNA-based data storage systems",
+      "T2": "COMPUTATIONAL AND STRUCTURAL BIOTECHNOLOGY JOURNAL",
+      "M3": "Article",
+      "AB": "DNA-based data storage has emerged as a groundbreaking solution to the growing demand for efficient, high- density, and long-term data storage. It is attracting many researchers' attention, who are implementing functions such as random access, searching, and data operations apart from the existing capabilities, including reading and writing. We summarize the recent progress of how biotechnological tools, based on sequence specificity, encapsulation, and high-dimensional structures of DNA molecules, facilitate the implementation of various functions. The limitations of using biochemical reactions that hinder the development of more precise and efficient information storage systems are also discussed. Future advancements in molecular biology and nanotechnology are expected to improve the architecture, scalability, and efficiency of DNA storage, positioning it as a sustainable and dynamic alternative to conventional data storage systems.",
+      "PU": "ELSEVIER",
+      "PI": "AMSTERDAM",
+      "PA": "RADARWEG 29, 1043 NX AMSTERDAM, NETHERLANDS",
+      "SN": [
+        "2001-0370"
+      ],
+      "DA": "2025 ",
+      "PY": "2025",
+      "VL": "27",
+      "SP": "624",
+      "EP": "630",
+      "DO": "10.1016/j.csbj.2025.02.002",
+      "AN": "WOS:001425760200001",
+      "AD": [
+        "Chinese Univ Hong Kong, Sch Med, Shenzhen 518172, Peoples R China",
+        "BGI Res, Beijing 100101, Peoples R China",
+        "BGI Res, Shenzhen 518083, Peoples R China"
+      ],
+      "M2": "BGI Res",
+      "Y2": "2025-02-26"
+    },
+    {
+      "TY": "JOUR",
+      "AU": [
+        "Li, Yiming",
+        "Zhang, Haoling",
+        "Chen, Yuxin",
+        "Shen, Yue",
+        "Ping, Zhi"
+      ],
+      "TI": "DNA Bloom Filter enables anti-contamination and file version control for DNA-based data storage",
+      "T2": "BRIEFINGS IN BIOINFORMATICS",
+      "M3": "Article",
+      "AB": "DNA storage is one of the most promising ways for future information storage due to its high data storage density, durable storage time and low maintenance cost. However, errors are inevitable during synthesizing, storing and sequencing. Currently, many error correction algorithms have been developed to ensure accurate information retrieval, but they will decrease storage density or increase computing complexity. Here, we apply the Bloom Filter, a space-efficient probabilistic data structure, to DNA storage to achieve the anti-error, or anti-contamination function. This method only needs the original correct DNA sequences (referred to as target sequences) to produce a corresponding data structure, which will filter out almost all the incorrect sequences (referred to as non-target sequences) during sequencing data analysis. Experimental results demonstrate the universal and efficient filtering capabilities of our method. Furthermore, we employ the Counting Bloom Filter to achieve the file version control function, which significantly reduces synthesis costs when modifying DNA-form files. To achieve cost-efficient file version control function, a modified system based on yin-yang codec is developed.",
+      "PU": "OXFORD UNIV PRESS",
+      "PI": "OXFORD",
+      "PA": "GREAT CLARENDON ST, OXFORD OX2 6DP, ENGLAND",
+      "SN": [
+        "1467-5463",
+        "1477-4054"
+      ],
+      "DA": "2024 MAR 27",
+      "PY": "2024",
+      "VL": "25",
+      "IS": "3",
+      "C7": "bbae125",
+      "DO": "10.1093/bib/bbae125",
+      "AN": "WOS:001193845100006",
+      "AD": [
+        "BGI Res, Complext Bldg,Beishan Ind Dist, Shenzhen 518083, Peoples R China",
+        "BGI, Shenzhen, Peoples R China",
+        "BGI Res, Shenzhen, Peoples R China",
+        "King Abdullah Univ Sci & Technol, Thuwal, Saudi Arabia",
+        "Beijing Genom Inst, Beijing, Peoples R China",
+        "BGI Res, Synth Biol, Shenzhen, Peoples R China",
+        "Chinese Univ Hong Kong, Sch Med, Shenzhen, Peoples R China"
+      ],
+      "Y2": "2024-04-06"
+    },
+    {
+      "TY": "JOUR",
+      "AU": [
+        "Chang, Tiantian",
+        "Ding, Weichao",
+        "Yan, Shirui",
+        "Wang, Yun",
+        "Zhang, Haoling",
+        "Zhang, Yu",
+        "Ping, Zhi",
+        "Zhang, Huiming",
+        "Huang, Yijian",
+        "Zhang, Jiahui",
+        "Wang, Dan",
+        "Zhang, Wenwei",
+        "Xu, Xun",
+        "Shen, Yue",
+        "Fu, Xian"
+      ],
+      "TI": "A robust yeast biocontainment system with two-layered regulation switch dependent on unnatural amino acid",
+      "T2": "NATURE COMMUNICATIONS",
+      "M3": "Article",
+      "AB": "Synthetic auxotrophy in which cell viability depends on the presence of an unnatural amino acid (unAA) provides a powerful strategy to restrict unwanted propagation of genetically modified organisms (GMOs) in open environments and potentially prevent industrial espionage. Here, we describe a generic approach for robust biocontainment of budding yeast dependent on unAA. By understanding escape mechanisms, we specifically optimize our strategies by introducing designed \"immunity\" to the generation of amber-suppressor tRNAs and developing the transcriptional- and translational-based biocontainment switch. We further develop a fitness-oriented screening method to easily obtain multiplex safeguard strains that exhibit robust growth and undetectable escape frequency (<similar to 10(-9)) on solid media for 14 days. Finally, we show that employing our multiplex safeguard system could restrict the proliferation of strains of interest in a real fermentation scenario, highlighting the great potential of our yeast biocontainment strategy to protect the industrial proprietary strains.",
+      "PU": "NATURE PORTFOLIO",
+      "PI": "BERLIN",
+      "PA": "HEIDELBERGER PLATZ 3, BERLIN, 14197, GERMANY",
+      "SN": [
+        "2041-1723"
+      ],
+      "DA": "2023 OCT 14",
+      "PY": "2023",
+      "VL": "14",
+      "IS": "1",
+      "C7": "6487",
+      "DO": "10.1038/s41467-023-42358-4",
+      "AN": "WOS:001095513800016",
+      "AD": [
+        "Univ Chinese Acad Sci, Coll Life Sci, Beijing 100049, Peoples R China",
+        "BGI Res, Shenzhen 518083, Peoples R China",
+        "BGI Res, Changzhou 213299, Peoples R China",
+        "BGI Res, Guangdong Prov Key Lab Genome Read & Write, Shenzhen 518083, Peoples R China",
+        "BNU HKBU United Int Coll, Guangdong Prov Key Lab Interdisciplinary Res & App, Zhuhai 519087, Peoples R China",
+        "BNU HKBU United Int Coll, Zhuhai 519087, Peoples R China"
+      ],
+      "M2": "BGI Res",
+      "Y2": "2023-12-06"
+    },
+    {
+      "TY": "JOUR",
+      "AU": [
+        "Chen, Yuting",
+        "Zhang, Haoling",
+        "Wang, Wen",
+        "Shen, Yue",
+        "Ping, Zhi"
+      ],
+      "TI": "Rapid generation of high-quality structure figures for publication with PyMOL-PUB",
+      "T2": "BIOINFORMATICS",
+      "M3": "Article",
+      "AB": "Motivation The advancement of structural biology has increased the requirements for researchers to quickly and efficiently visualize molecular structures in silico. Meanwhile, it is also time-consuming for structural biologists to create publication-standard figures, as no useful tools can directly generate figures from structure data. Although manual editing can ensure that figures meet the standards required for publication, it requires a deep understanding of software operations and/or program call commands. Therefore, providing interfaces based on established software instead of manual editing becomes a significant necessity.Results We developed PyMOL-PUB, based on the original design of PyMOL, to effectively create publication-quality figures from molecular structure data. It provides functions including structural alignment methods, functional coloring schemes, conformation adjustments, and layout plotting strategies. These functions allow users to easily generate high-quality figures, demonstrate structural differences, illustrate inter-molecular interactions, and predict performances of biomacromolecules.Availability and implementation Our tool is publicly available at https://github.com/BGI-SynBio/PyMOL-PUB.",
+      "PU": "OXFORD UNIV PRESS",
+      "PI": "OXFORD",
+      "PA": "GREAT CLARENDON ST, OXFORD OX2 6DP, ENGLAND",
+      "SN": [
+        "1367-4803",
+        "1367-4811"
+      ],
+      "DA": "2024 MAR 4",
+      "PY": "2024",
+      "VL": "40",
+      "IS": "3",
+      "C7": "btae139",
+      "DO": "10.1093/bioinformatics/btae139",
+      "AN": "WOS:001187114600001",
+      "C6": "MAR 2024",
+      "AD": [
+        "Univ Chinese Acad Sci, Coll Life Sci, Beijing 100049, Peoples R China",
+        "BGI Res, Shenzhen 518083, Peoples R China",
+        "BGI Res, Changzhou 213299, Peoples R China",
+        "Chinese Univ Hong Kong, Sch Med, Shenzhen 518172, Peoples R China",
+        "BGI Res, Complex Bldg,Beishan Rd, Shenzhen 518083, Peoples R China"
+      ],
+      "M2": "BGI Res",
+      "Y2": "2024-04-01"
+    },
+    {
+      "TY": "CPAPER",
+      "AU": [
+        "Zhang, Jitao",
+        "Chen, Shihong",
+        "Zhang, Haoling",
+        "Shen, Yue",
+        "Ping, Zhi"
+      ],
+      "ED": [
+        "Wei, Y",
+        "Li, M",
+        "Skums, P",
+        "Cai, Z"
+      ],
+      "TI": "DNA Image Storage Using a Scheme Based on Fuzzy Matching on Natural Genome",
+      "T2": "BIOINFORMATICS RESEARCH AND APPLICATIONS, ISBRA 2021",
+      "M3": "Proceedings Paper",
+      "CP": "17th International Symposium on Bioinformatics Research and Applications (ISBRA)",
+      "CL": "Shenzhen, PEOPLES R CHINA",
+      "AB": "Among lots of emerging storage technologies, DNA storage is with great potential for its high data storage density and low maintenance cost. However, DNA synthesis and sequencing, the two enabling technologies for DNA storage, are of high cost and inefficient in information writing and reading, which postpones the commercialization of DNA storage. Considering the expensive DNA synthesis cost, a DNA storage system based on natural genomes is devised to compress images by using fuzzy matching and image processing technology, which can reduce the cost of storing images in the DNA medium. According to our devised DNA storage scheme, the number of nucleotide sequences to be synthesized can be reduced by about 90% and the visual quality of retrieved images can be compared with conventional algorithms. Furthermore, because of no dependence among index sequences generated by fuzzy matching, the robustness of our scheme is better than that of those DNA storage schemes directly using conventional algorithms to compress images. Finally, we have investigated the factors that may influence images' fuzzy matching, including genome size, GC content and relative entropy, which can be used to design a criterion to select better genomes for a given image.",
+      "PU": "SPRINGER INTERNATIONAL PUBLISHING AG",
+      "PI": "CHAM",
+      "PA": "GEWERBESTRASSE 11, CHAM, CH-6330, SWITZERLAND",
+      "SN": [
+        "0302-9743",
+        "1611-3349",
+        "978-3-030-91414-1",
+        "978-3-030-91415-8"
+      ],
+      "DA": "2021 ",
+      "PY": "2021",
+      "VL": "13064",
+      "SP": "572",
+      "EP": "583",
+      "DO": "10.1007/978-3-030-91415-8_48",
+      "AN": "WOS:000922632800048",
+      "AD": [
+        "Univ Chinese Acad Sci, Coll Life Sci, Beijing 101408, Peoples R China",
+        "BGI Shenzhen, Shenzhen 518083, Peoples R China",
+        "BGI Shenzhen, Guangdong Prov Key Lab Genome Read & Write, Shenzhen 518120, Peoples R China",
+        "BGI Shenzhen, George Church Inst Regenesis, Shenzhen 518120, Peoples R China",
+        "China Natl GeneBank, BGI Shenzhen, Shenzhen 518120, Peoples R China",
+        "Chinese Acad Sci, Shenzhen Inst Synthet Biol, Shenzhen Inst Adv Technol, Shenzhen 518055, Peoples R China"
+      ],
+      "Y2": "2021-01-01"
+    },
+    {
+      "TY": "JOUR",
+      "AU": [
+        "Ping, Zhi",
+        "Ma, Dongzhao",
+        "Huang, Xiaoluo",
+        "Chen, Shihong",
+        "Liu, Longying",
+        "Guo, Fei",
+        "Zhu, Sha Joe",
+        "Shen, Yue"
+      ],
+      "TI": "Carbon-based archiving: current progress and future prospects of DNA-based data storage",
+      "T2": "GIGASCIENCE",
+      "M3": "Review",
+      "AB": "The information explosion has led to a rapid increase in the amount of data requiring physical storage. However, in the near future, existing storage methods (i.e., magnetic and optical media) will be insufficient to store these exponentially growing data. Therefore, data scientists are continually looking for better, more stable, and space-efficient alternatives to store these huge datasets. Because of its unique biological properties, highly condensed DNA has great potential to become a storage material for the future. Indeed, DNA-based data storage has recently emerged as a promising approach for long-term digital information storage. This review summarizes state-of-the-art methods, including digital-to-DNA coding schemes and the media types used in DNA-based data storage, and provides an overview of recent progress achieved in this field and its exciting future.",
+      "PU": "OXFORD UNIV PRESS",
+      "PI": "OXFORD",
+      "PA": "GREAT CLARENDON ST, OXFORD OX2 6DP, ENGLAND",
+      "SN": [
+        "2047-217X"
+      ],
+      "DA": "2019 JUN",
+      "PY": "2019",
+      "VL": "8",
+      "IS": "6",
+      "C7": "giz075",
+      "DO": "10.1093/gigascience/giz075",
+      "AN": "WOS:000475755000014",
+      "AD": [
+        "BGI Shenzhen, Shenzhen Engn Lab Innovat Mol Diagnost, Guangdong Prov Acad Workstn BGI Synthet Genom, Guangdong Prov Key Lab Genome Read & Write, Shenzhen 518083, Peoples R China",
+        "Univ Oxford, Big Data Inst, Li Ka Shing Ctr Hlth Informat & Discovery, Old Rd Campus, Oxford OX3 7LF, England"
+      ],
+      "Y2": "2019-06-01"
+    },
+    {
+      "TY": "JOUR",
+      "AU": [
+        "Dong, Yiming",
+        "Sun, Fajia",
+        "Ping, Zhi",
+        "Ouyang, Qi",
+        "Qian, Long"
+      ],
+      "TI": "DNA storage: research landscape and future prospects",
+      "T2": "NATIONAL SCIENCE REVIEW",
+      "M3": "Review",
+      "AB": "The global demand for data storage is currently outpacing the world's storage capabilities. DNA, the carrier of natural genetic information, offers a stable, resource- and energy-efficient and sustainable data storage solution. In this review, we summarize the fundamental theory, research history, and technical challenges of DNA storage. From a quantitative perspective, we evaluate the prospect of DNA, and organic polymers in general, as a novel class of data storage medium.",
+      "PU": "OXFORD UNIV PRESS",
+      "PI": "OXFORD",
+      "PA": "GREAT CLARENDON ST, OXFORD OX2 6DP, ENGLAND",
+      "SN": [
+        "2095-5138",
+        "2053-714X"
+      ],
+      "DA": "2020 JUN",
+      "PY": "2020",
+      "VL": "7",
+      "IS": "6",
+      "SP": "1092",
+      "EP": "1107",
+      "DO": "10.1093/nsr/nwaa007",
+      "AN": "WOS:000544175300017",
+      "AD": [
+        "Peking Univ, Ctr Quantitat Biol, Beijing 100871, Peoples R China",
+        "Peking Univ, Peking Tsinghua Ctr Life Sci, Beijing 100871, Peoples R China",
+        "BGI Shenzhen, Acad Workstat BGI Synthet Genom, Shenzhen 518083, Peoples R China",
+        "Peking Univ, Sch Phys, State Key Lab Artificial Microstruct & Mesoscop P, Beijing 100871, Peoples R China"
+      ],
+      "Y2": "2020-06-01"
+    },
+    {
+      "TY": "JOUR",
+      "AU": [
+        "Ping, Zhi",
+        "Chen, Shihong",
+        "Zhou, Guangyu",
+        "Huang, Xiaoluo",
+        "Zhu, Sha Joe",
+        "Zhang, Haoling",
+        "Lee, Henry H.",
+        "Lan, Zhaojun",
+        "Cui, Jie",
+        "Chen, Tai",
+        "Zhang, Wenwei",
+        "Yang, Huanming",
+        "Xu, Xun",
+        "Church, George M.",
+        "Shen, Yue"
+      ],
+      "TI": "Towards practical and robust DNA-based data archiving using the yin-yang codec system",
+      "T2": "NATURE COMPUTATIONAL SCIENCE",
+      "M3": "Article",
+      "AB": "DNA is a promising data storage medium due to its remarkable durability and space-efficient storage. Early bit-to-base transcoding schemes have primarily pursued information density, at the expense of introducing biocompatibility challenges or decoding failure. Here we propose a robust transcoding algorithm named the yin-yang codec, using two rules to encode two binary bits into one nucleotide, to generate DNA sequences that are highly compatible with synthesis and sequencing technologies. We encoded two representative file formats and stored them in vitro as 200 nt oligo pools and in vivo as a similar to 54 kbps DNA fragment in yeast cells. Sequencing results show that the yin-yang codec exhibits high robustness and reliability for a wide variety of data types, with an average recovery rate of 99.9% above 10(4) molecule copies and an achieved recovery rate of 87.53% at <= 10(2) copies. Additionally, the in vivo storage demonstration achieved an experimentally measured physical density close to the theoretical maximum.",
+      "PU": "SPRINGERNATURE",
+      "PI": "LONDON",
+      "PA": "CAMPUS, 4 CRINAN ST, LONDON, N1 9XW, ENGLAND",
+      "SN": [
+        "2662-8457"
+      ],
+      "DA": "2022 APR",
+      "PY": "2022",
+      "VL": "2",
+      "IS": "4",
+      "SP": "234",
+      "EP": "242",
+      "DO": "10.1038/s43588-022-00231-2",
+      "AN": "WOS:001136333800001",
+      "AD": [
+        "BGI Shenzhen, Shenzhen, Peoples R China",
+        "BGI Shenzhen, Guangdong Prov Key Lab Genome Read & Write, Shenzhen, Peoples R China",
+        "BGI Shenzhen, George Church Inst Regenesis, Shenzhen, Peoples R China",
+        "Chinese Acad Sci, Shenzhen Inst Synthet Biol, Shenzhen Inst Adv Technol, Shenzhen, Peoples R China",
+        "BGI Shenzhen, China Natl GeneBank, Shenzhen, Peoples R China",
+        "Harvard Med Sch, Dept Genet, Boston, MA 02115 USA",
+        "Harvard Univ, Dept Mol & Cellular Biol, Cambridge, MA 02138 USA",
+        "Univ Oxford, Big Data Inst, Li Ka Shing Ctr Hlth Informat & Discovery, Oxford, England",
+        "Capital Normal Univ, Sch Math Sci, Beijing, Peoples R China",
+        "Harvard Univ, Wyss Inst Biol Inspired Engn, Boston, MA 02115 USA"
+      ],
+      "Y2": "2022-04-01"
+    },
+    {
+      "TY": "JOUR",
+      "AU": [
+        "Sun, Fajia",
+        "Dong, Yiming",
+        "Ni, Ming",
+        "Ping, Zhi",
+        "Sun, Yuhui",
+        "Ouyang, Qi",
+        "Qian, Long"
+      ],
+      "TI": "Mobile and Self-Sustained Data Storage in an Extremophile Genomic DNA",
+      "T2": "ADVANCED SCIENCE",
+      "M3": "Article",
+      "AB": "DNA has been pursued as a novel biomaterial for digital data storage. While large-scale data storage and random access have been achieved in DNA oligonucleotide pools, repeated data accessing requires constant data replenishment, and these implementations are confined in professional facilities. Here, a mobile data storage system in the genome of the extremophile Halomonas bluephagenesis, which enables dual-mode storage, dynamic data maintenance, rapid readout, and robust recovery. The system relies on two key components: A versatile genetic toolbox for the integration of 10-100 kb scale synthetic DNA into H. bluephagenesis genome and an efficient error correction coding scheme targeting noisy nanopore sequencing reads. The storage and repeated retrieval of 5 KB data under non-laboratory conditions are demonstrated. The work highlights the potential of DNA data storage in domestic and field scenarios, and expands its application domain from archival data to frequently accessed data.",
+      "PU": "WILEY",
+      "PI": "HOBOKEN",
+      "PA": "111 RIVER ST, HOBOKEN 07030-5774, NJ USA",
+      "SN": [
+        "2198-3844"
+      ],
+      "DA": "2023 APR",
+      "PY": "2023",
+      "VL": "10",
+      "IS": "10",
+      "DO": "10.1002/advs.202206201",
+      "AN": "WOS:000928442800001",
+      "C6": "FEB 2023",
+      "AD": [
+        "Peking Univ, Ctr Quantitat Biol, 5 Yiheyuan Rd Haidian Dist, Beijing 100871, Peoples R China",
+        "BGI Shenzhen, Academician Workstat BGI Synthet Genom, Huada Comprehens Pk, Shenzhen 518083, Peoples R China",
+        "Peking Univ, State Key Lab Artificial Microstruct & Mesoscop Ph, 5 Yiheyuan Rd Haidian Dist, Beijing 100871, Peoples R China"
+      ],
+      "Y2": "2023-03-03"
+    },
+    {
+      "TY": "JOUR",
+      "AU": [
+        "Gao, Yakun",
+        "Chen, Gangsheng",
+        "Ma, Biao",
+        "Wang, Yaru",
+        "Wei, Yanjie",
+        "Qian, Yunzhi",
+        "Kong, Ziyan",
+        "Hu, Yian",
+        "Ding, Xiong",
+        "Ping, Zhi",
+        "Zhao, Chao",
+        "Liu, Hong"
+      ],
+      "TI": "Phase transition-driven encapsulation of biomolecules using liquid metal with on-demand release for biomedical applications",
+      "T2": "BIOSENSORS & BIOELECTRONICS",
+      "M3": "Article",
+      "AB": "Robust encapsulation and controllable release of biomolecules have wide biomedical applications ranging from biosensing, drug delivery to information storage. However, conventional biomolecule encapsulation strategies have limitations in complicated operations, optical instability, and difficulty in decapsulation. Here, we report a simple, robust, and solvent-free biomolecule encapsulation strategy based on gallium liquid metal featuring lowtemperature phase transition, self-healing, high hermetic sealing, and intrinsic resistance to optical damage. We sandwiched the biomolecules with the solid gallium films followed by low-temperature welding of the films for direct sealing. The gallium can not only protect DNA and enzymes from various physical and chemical damages but also allow the on-demand release of biomolecules by applying vibration to break the liquid gallium. We demonstrated that a DNA-coded image file can be recovered with up to 99.9% sequence retention after an accelerated aging test. We also showed the practical applications of the controllable release of bioreagents in a one-pot RPA-CRISPR/Cas12a reaction for SARS-COV-2 screening with a low detection limit of 10 copies within 40 min. This work may facilitate the development of robust and stimuli-responsive biomolecule capsules by using low-melting metals for biotechnology.",
+      "PU": "ELSEVIER ADVANCED TECHNOLOGY",
+      "PI": "OXFORD",
+      "PA": "OXFORD FULFILLMENT CENTRE THE BOULEVARD, LANGFORD LANE, KIDLINGTON, OXFORD OX5 1GB, OXON, ENGLAND",
+      "SN": [
+        "0956-5663",
+        "1873-4235"
+      ],
+      "DA": "2024 SEP 1",
+      "PY": "2024",
+      "VL": "259",
+      "C7": "116403",
+      "DO": "10.1016/j.bios.2024.116403",
+      "AN": "WOS:001346408900001",
+      "C6": "MAY 2024",
+      "AD": [
+        "Southeast Univ, Sch Biol Sci & Med Engn, State Key Lab Digital Med Engn, Nanjing 210096, Peoples R China",
+        "Southeast Univ, Sch Publ Hlth, Key Lab Environm Med & Engn, Minist Educ, Nanjing 210096, Peoples R China",
+        "Univ Chinese Acad Sci, Coll Life Sci, Beijing 100049, Peoples R China",
+        "BGI Res, Changzhou 213299, Peoples R China"
+      ],
+      "M2": "BGI Res",
+      "Y2": "2024-11-09"
+    }
+  ]

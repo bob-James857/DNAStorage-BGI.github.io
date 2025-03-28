@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>People - DNA Storage Lab</title>
     <style>
-        
+        /* === Base Styles === */
         body {
-            font-family: Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            line-height: 1.7;
             color: #333;
+            background-color: #f8f9fa;
         }
         .container {
             width: 90%;
@@ -19,24 +20,37 @@
             margin: 0 auto;
             padding: 20px;
         }
+
+        /* === Header === */
         header {
             text-align: center;
             padding: 20px 0;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid #e0e0e0; /* Lighter border */
+            margin-bottom: 20px;
         }
-        h1 {
+        h1 { /* DNA Storage Lab */
             font-size: 2.5em;
             margin-bottom: 5px;
+            color: #2c3e50; /* Dark blue-grey */
+            letter-spacing: -0.5px;
+            /* font-weight: bold; is usually default for h1 */
         }
-        h2 {
+        h2 { /* BGI Research (in header) & Section Titles */
             font-size: 1.5em;
             color: #555;
-            font-weight: normal;
+            font-weight: bold; /* <<< MODIFIED: Changed from normal to bold */
             margin-top: 0;
+            letter-spacing: -0.3px;
         }
+
+        /* === Navigation === */
         nav {
             text-align: center;
             padding: 20px 0;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         nav a {
             margin: 0 15px;
@@ -44,9 +58,11 @@
             color: #555;
             font-weight: bold;
             position: relative;
+            padding: 5px 0;
+            transition: color 0.3s ease;
         }
         nav a:hover {
-            color: #000;
+            color: #3498db;
         }
         nav a::before {
             content: '•';
@@ -57,16 +73,92 @@
             content: '';
             margin-right: 0;
         }
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #3498db;
+            transition: width 0.3s ease;
+        }
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* === Divider === */
         .divider {
-            border-top: 1px solid #ddd;
+            border-top: 1px solid #e0e0e0; /* Lighter border */
             margin: 20px 0;
         }
+
+        /* === People Section === */
         .people-section {
             margin: 30px 0;
+        }
+        /* Section Title (Lab Members) */
+        .people-section > h2 {
+             font-size: 2em;
+             color: #2c3e50;
+             text-align: center;
+             margin-bottom: 30px;
+             /* font-weight: bold; Inherited from general h2 rule */
         }
         .people-category {
             margin-bottom: 40px;
         }
+        .people-category h3 { /* Staff, PhD Students, etc. */
+             color: #34495e; /* Slightly darker heading */
+             border-bottom: 2px solid #3498db; /* Accent border */
+             padding-bottom: 8px;
+             margin-bottom: 25px; /* More space below heading */
+             font-size: 1.6em; /* Make category titles larger */
+        }
+
+        /* === Team Photo Section === */
+        .team-photo-section {
+            margin-bottom: 50px; /* More space after photos */
+        }
+        .team-photo-container {
+            margin-top: 20px;
+        }
+        .team-photo-item {
+            margin-bottom: 30px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06); /* Slightly softer shadow */
+            background-color: #fff;
+        }
+        .team-photo-img {
+            display: block; /* Prevent extra space below image */
+            width: 100%;
+            max-height: 600px; /* Increased max height */
+            object-fit: cover; /* Cover ensures image fills container */
+            object-position: center; /* Center the image */
+        }
+        .team-photo-caption {
+            padding: 15px 20px; /* More padding */
+            border-top: 1px solid #eee;
+            background-color: #fdfdfd; /* Very light background for caption */
+        }
+        .team-photo-caption h4 { /* Photo Description */
+            margin: 0 0 10px 0;
+            color: #2c3e50;
+            font-size: 1.2em;
+        }
+        .team-photo-caption p { /* Location, Year */
+            margin: 5px 0;
+            color: #555;
+            font-size: 0.95em;
+        }
+        .team-photo-caption .location {
+            color: #3498db; /* Theme color for location */
+            font-weight: 500;
+        }
+
+        /* === People Grid & Cards === */
         .people-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -80,19 +172,19 @@
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-            background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+            background: #ffffff; /* Changed from gradient to solid white */
             display: flex;
             flex-direction: column;
         }
         .person-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.1); /* Softer hover shadow */
             border-color: #3498db;
         }
         .person-photo {
             width: 100%;
             height: 250px;
-            background-color: #f5f5f5;
+            background-color: #f0f0f0; /* Lighter placeholder bg */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -107,7 +199,7 @@
         .person-photo svg {
             width: 50%;
             height: 50%;
-            opacity: 0.5;
+            opacity: 0.4; /* More subtle placeholder */
         }
         .person-info {
             padding: 20px;
@@ -115,13 +207,12 @@
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            /* align-items: flex-start; Removed */
         }
         .person-name {
             font-size: 1.3em;
             font-weight: bold;
             margin: 0 0 8px 0;
-            padding: 0;
             color: #2c3e50;
             width: 100%;
         }
@@ -134,34 +225,43 @@
             border-bottom: 1px dashed #eee;
             width: 100%;
         }
-        .person-bio {
+        .person-bio { /* Research Areas */
             font-size: 0.95em;
-            margin-bottom: 12px;
-            line-height: 1.5;
+            margin-bottom: 15px; /* Space before details */
+            line-height: 1.6; /* Slightly reduced line height */
             color: #555;
+            width: 100%;
         }
+         .person-bio strong { /* Make "Research Areas:" bold */
+             display: block;
+             margin-bottom: 5px;
+             font-weight: 600;
+             color: #444;
+         }
         .person-education {
             font-size: 0.9em;
             color: #666;
-            margin: 0;
-            padding: 10px 0;
+            margin: 0 0 10px 0; /* Space below education */
+            padding: 10px 0 0 0; /* Top padding only */
             border-top: 1px solid #eee;
             width: 100%;
         }
         .person-education strong {
              display: block;
              color: #444;
-             
+             margin-bottom: 5px;
+             font-weight: 600; /* Bolder label */
         }
         .person-contact {
             font-size: 0.9em;
             color: #777;
             display: block;
             margin: 0;
-            padding: 10px 0;
+            padding: 10px 0 0 0; /* Top padding only */
             border-top: 1px solid #eee;
             word-break: break-all;
             width: 100%;
+            margin-top: auto; /* Pushes edu+contact block down */
         }
         .person-contact > div {
             margin-bottom: 5px;
@@ -169,46 +269,81 @@
         .person-contact strong {
             color: #555;
             margin-right: 5px;
+            font-weight: 600; /* Bolder label */
         }
+
+        /* === Footer === */
         footer {
             text-align: center;
-            padding: 20px 0;
-            margin-top: 30px;
-            border-top: 1px solid #ddd;
-            color: #777;
+            padding: 25px 0;
+            margin-top: 40px;
+            border-top: 1px solid #e0e0e0;
+            color: #888;
+            font-size: 0.9em;
         }
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* === Responsive === */
         @media (max-width: 768px) {
+            .container { width: 95%; }
+            h1 { font-size: 2em; }
+            h2 { font-size: 1.3em; } /* Adjust general h2 */
+            .people-section > h2 { font-size: 1.7em; } /* Adjust section title */
+            .people-category h3 { font-size: 1.4em; } /* Adjust category title */
             .people-grid {
                 grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 20px;
             }
              .person-photo {
                 height: 200px;
             }
-             .person-education {
-                margin-bottom: 12px;
-             }
+            nav a { margin: 0 10px; }
         }
+         @media (max-width: 480px) {
+             .container { padding: 15px; }
+             .people-grid {
+                 grid-template-columns: 1fr; /* Single column */
+             }
+             nav a { margin: 0 8px; font-size: 0.9em; }
+             nav a::before { margin-right: 5px; }
+             .team-photo-caption h4 { font-size: 1.1em; }
+         }
     </style>
 </head>
 <body>
     <div class="container">
-        
+
         <header>
             <h1>DNA Storage Lab</h1>
             <h2>BGI Research</h2>
         </header>
+
         <nav>
             <a href="index.html">Home</a>
             <a href="people.html">People</a>
             <a href="research.html">Research</a>
             <a href="publications.html">Publications</a>
+            <a href="positions.html">Positions</a>
             <a href="media.html">Media</a>
         </nav>
+
         <div class="divider"></div>
 
         <div class="people-section">
             <h2>Lab Members</h2>
-            
+
+            <!-- Team Photos Section -->
+            <div class="people-category team-photo-section">
+                <h3>Team Photos</h3>
+                <div class="team-photo-container" id="team-photos">
+                    <!-- Team photos will be loaded here by JS -->
+                    <p style="text-align: center; color: #888;">Loading team photos...</p>
+                </div>
+            </div>
+
+            <!-- Individual Member Categories -->
             <div class="people-category">
                 <h3>Staff</h3>
                 <div class="people-grid" id="grid-staff"></div>
@@ -235,7 +370,7 @@
             </div>
         </div>
 
-        
+
         <footer>
             <p>© 2024 DNA Storage Lab | BGI Research</p>
             <p>Address: BGI Building, Beishan Industrial Zone, Yantian District, Shenzhen</p>
@@ -243,7 +378,7 @@
     </div>
 
     <script>
-        // --- 辅助函数 (createPlaceholderSvg, getRelativeImagePath) 保持不变 ---
+        // --- Helper Functions (Unchanged) ---
         function createPlaceholderSvg(color = '#bdc3c7') {
             return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="${color}"><circle cx="50" cy="35" r="20"/><path d="M50,60 C30,60 15,75 15,95 L85,95 C85,75 70,60 50,60"/><text x="50" y="80" font-size="10" text-anchor="middle" fill="#555">No Photo</text></svg>`;
         }
@@ -252,10 +387,55 @@
             if (!fullPath || typeof fullPath !== 'string') return null;
             const filename = fullPath.replace(/\\/g, '/').split('/').pop();
             if (!filename) return null;
-            return `images/${filename}`;
+            return `images/${filename}`; // Assuming images folder relative to HTML
         }
 
-        // --- 占位卡片定义 (placeholderCards) 保持不变 ---
+        // --- Load Team Photos (Unchanged) ---
+        async function loadTeamPhotos() {
+            const photoContainer = document.getElementById('team-photos');
+            if (!photoContainer) return;
+            photoContainer.innerHTML = '<p style="text-align: center; color: #888;">Loading team photos...</p>'; // Show loading message
+
+            try {
+                const response = await fetch('member/together.json'); // Ensure correct path
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status} fetching together.json`);
+
+                const photoData = await response.json();
+                photoContainer.innerHTML = ''; // Clear loading message
+
+                const photos = Array.isArray(photoData) ? photoData : [photoData];
+                photos.sort((a, b) => (a.year || 0) - (b.year || 0)); // Sort by year, handle missing year
+
+                if (photos.length === 0) {
+                     photoContainer.innerHTML = '<p style="text-align: center; color: #888;">No team photos available.</p>';
+                     return;
+                }
+
+                photos.forEach(photo => {
+                    const photoItem = document.createElement('div');
+                    photoItem.className = 'team-photo-item';
+                    const imageSrc = photo.image_path || 'images/placeholder.png'; // Fallback image?
+                    const altText = `Team photo ${photo.year || ''}`.trim();
+
+                    photoItem.innerHTML = `
+                        <img src="${imageSrc}" alt="${altText}" class="team-photo-img" loading="lazy">
+                        <div class="team-photo-caption">
+                            <h4>${photo.description || altText}</h4>
+                            ${photo.location ? `<p class="location">Location: ${photo.location}</p>` : ''}
+                            ${photo.year ? `<p>Year: ${photo.year}</p>` : ''}
+                        </div>
+                    `;
+                    photoContainer.appendChild(photoItem);
+                });
+            } catch (error) {
+                console.error('Error loading team photos:', error);
+                if (photoContainer) {
+                    photoContainer.innerHTML = `<p style="color: red; text-align: center;">Failed to load team photos. ${error.message}</p>`;
+                }
+            }
+        }
+
+        // --- Placeholder Cards (Unchanged) ---
         const placeholderCards = {
             '博士': `<div class="person-card"><div class="person-photo">${createPlaceholderSvg('#3498db')}</div><div class="person-info"><div class="person-name">Position Available</div><div class="person-title">PhD Student</div><div class="person-bio">We are looking for motivated PhD students interested in DNA storage and DNA nanotechnology.</div></div></div>`,
             '硕士': `<div class="person-card"><div class="person-photo">${createPlaceholderSvg('#e74c3c')}</div><div class="person-info"><div class="person-name">Position Available</div><div class="person-title">Master Student</div><div class="person-bio">We are looking for motivated Master students interested in DNA storage and DNA nanotechnology.</div></div></div>`,
@@ -265,62 +445,56 @@
              '客座学生': null
          };
 
-        // --- 网格映射 (gridMapping) 保持不变 ---
+        // --- Grid Mapping (Unchanged) ---
         const gridMapping = {'职工': 'grid-staff','博士': 'grid-phd','硕士': 'grid-master','本科生': 'grid-undergrad','客座学生': 'grid-visiting','已毕业人员': 'grid-alumni'};
 
-
-        // --- 主要逻辑：使用 fetch 加载 JSON 数据 ---
-        fetch('member/member.json')
-            .then(response => {
+        // --- Load Individual Members (Unchanged) ---
+        async function loadMembers() {
+            try {
+                const response = await fetch('member/member.json'); // Ensure correct path
                 if (!response.ok) {
-                    throw new Error(`HTTP 错误！状态码: ${response.status}，发生在获取 member/member.json 时。请检查文件路径是否正确以及服务器是否运行。`);
+                    throw new Error(`HTTP error! status: ${response.status} fetching member.json`);
                 }
-                return response.json();
-            })
-            .then(members => {
-                // 1. 分组成员
+                const members = await response.json();
+
+                // Group Members
                 const groupedMembers = {'职工': [],'博士': [],'硕士': [],'本科生': [],'客座学生': [],'已毕业人员': []};
                 if (!Array.isArray(members)) {
-                     throw new Error("从 member.json 加载的数据不是一个数组。");
+                     throw new Error("Data from member.json is not an array.");
                 }
                 members.forEach(member => {
                     const category = member['身份标签'];
                     if (groupedMembers.hasOwnProperty(category)) {
                         groupedMembers[category].push(member);
                     } else {
-                        console.warn(`成员 "${member['姓名'] || '未命名'}" 的身份标签 "${category}" 未知。分组时将跳过此成员。`);
+                        console.warn(`Unknown category tag: "${category}" for member "${member['姓名'] || 'Unnamed'}". Skipping.`);
                     }
                 });
 
-                // 2. 填充网格
+                // Populate Grids
                 for (const category in gridMapping) {
                     const gridId = gridMapping[category];
                     const gridElement = document.getElementById(gridId);
                     if (gridElement) {
-                        gridElement.innerHTML = '';
+                        gridElement.innerHTML = ''; // Clear grid
                         const categoryMembers = groupedMembers[category];
 
                         if (categoryMembers && categoryMembers.length > 0) {
                             categoryMembers.forEach(member => {
                                 const imagePath = getRelativeImagePath(member['照片地址']);
                                 const researchInterestsText = (member['研究兴趣'] && Array.isArray(member['研究兴趣']) && member['研究兴趣'].length > 0)
-                                    ? `<strong>Research Areas:</strong><br>${member['研究兴趣'].join(', ')}`
-                                    : 'Research interests not specified.';
+                                    ? `<strong>Research Areas:</strong><br>${member['研究兴趣'].join(', ')}` // Added label and line break
+                                    : ''; // Hide if no interests
 
                                 let photoHtml = imagePath
                                     ? `<img src="${imagePath}" alt="Photo of ${member['姓名'] || 'Member'}" loading="lazy">`
                                     : createPlaceholderSvg();
 
-                                // 生成教育经历 HTML
+                                // Generate Education HTML
                                 let educationHtml = '';
                                 if (member['教育经历'] && Array.isArray(member['教育经历']) && member['教育经历'].length > 0) {
                                     const educationItems = member['教育经历']
-                                        .map(edu => {
-                                            if (edu && typeof edu === 'object') {
-                                                return `${edu['学位'] || ''}${edu['学位'] && edu['学校'] ? ', ' : ''}${edu['学校'] || ''}`;
-                                            }
-                                            return '';
-                                        })
+                                        .map(edu => edu && typeof edu === 'object' ? `${edu['学位'] || ''}${edu['学位'] && edu['学校'] ? ', ' : ''}${edu['学校'] || ''}` : '')
                                         .filter(item => item)
                                         .join('<br>');
                                     if (educationItems) {
@@ -328,7 +502,7 @@
                                     }
                                 }
 
-                                // 生成联系方式 HTML
+                                // Generate Contact HTML
                                 let contactDetails = [];
                                 if (member['email']) {
                                      contactDetails.push(`<div><strong>Email:</strong> ${member['email']}</div>`);
@@ -347,8 +521,7 @@
                                 }
                                 const contactHtml = contactDetails.length > 0 ? `<div class="person-contact">${contactDetails.join('')}</div>` : '';
 
-
-                                // 组装最终的卡片 HTML
+                                // Assemble Card HTML
                                 const cardHtml = `
                                     <div class="person-card">
                                         <div class="person-photo">
@@ -357,7 +530,7 @@
                                         <div class="person-info">
                                             <div class="person-name">${member['姓名'] || 'N/A'}</div>
                                             <div class="person-title">${member['职务'] || 'N/A'}</div>
-                                            <div class="person-bio">${researchInterestsText}</div>
+                                            ${researchInterestsText ? `<div class="person-bio">${researchInterestsText}</div>` : ''}
                                             ${educationHtml}
                                             ${contactHtml}
                                         </div>
@@ -366,23 +539,36 @@
                                 gridElement.innerHTML += cardHtml;
                             });
                         } else {
+                            // Handle empty categories or apply placeholders
                             const placeholderHtml = placeholderCards[category];
                             if (placeholderHtml) {
                                 gridElement.innerHTML = placeholderHtml;
+                            } else if (category !== '已毕业人员') { // Don't show 'no members' for alumni unless desired
+                               // gridElement.innerHTML = `<p style="text-align: center; color: #888; grid-column: 1 / -1;">No members currently in this category.</p>`;
                             }
                         }
                     } else {
-                         console.warn(`未找到 ID 为 "${gridId}" 的网格元素，对应类别 "${category}"。`);
+                         console.warn(`Grid element with ID "${gridId}" not found for category "${category}".`);
                     }
                 }
-            })
-            .catch(error => {
-                console.error('加载或处理成员数据时出错:', error);
-                const peopleSection = document.querySelector('.people-section');
-                if (peopleSection) {
-                     peopleSection.innerHTML = `<h2 style="color: red; text-align: center;">无法加载实验室成员</h2><p style="color: #555; text-align: center;">检索成员数据时出现问题。请尝试刷新页面或联系管理员。<br><small>错误详情: ${error.message}</small></p>`;
-                }
-            });
+            } catch (error) {
+                console.error('Error loading or processing member data:', error);
+                // Display error for member loading specifically
+                 Object.values(gridMapping).forEach(gridId => {
+                     const gridElement = document.getElementById(gridId);
+                     if (gridElement && gridElement.innerHTML === '') { // Only show error if grid is empty
+                         gridElement.innerHTML = `<p style="color: red; text-align: center; grid-column: 1 / -1;">Failed to load members. ${error.message}</p>`;
+                     }
+                 });
+            }
+        }
+
+        // --- Initial Load on DOMContentLoaded ---
+        document.addEventListener('DOMContentLoaded', function() {
+            loadTeamPhotos();
+            loadMembers(); // Load individual members as well
+            // loadPositions(); // Removed call to loadPositions as it's not in this HTML structure
+        });
 
     </script>
 

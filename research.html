@@ -6,11 +6,12 @@
     <title>Research - DNA Storage Lab</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            line-height: 1.7;
             color: #333;
+            background-color: #f8f9fa;
         }
         .container {
             width: 90%;
@@ -26,26 +27,40 @@
         h1 {
             font-size: 2.5em;
             margin-bottom: 5px;
+            color: #2c3e50;
+            letter-spacing: -0.5px;
         }
+        /* H2 style in research.html was different, keeping it as is unless specified */
         h2 {
             font-size: 1.5em;
             color: #555;
-            font-weight: normal;
+            font-weight: bold;
             margin-top: 0;
+            letter-spacing: -0.3px;
         }
+        /* --- MODIFIED NAV STYLE --- */
         nav {
             text-align: center;
             padding: 20px 0;
+            margin-bottom: 10px;
+            display: flex; /* Added from index.html */
+            justify-content: center; /* Added from index.html */
+            align-items: center; /* Added from index.html */
+            /* height: 100%; */ /* Removed height: 100% as likely unnecessary */
         }
+        /* --- END MODIFIED NAV STYLE --- */
+
         nav a {
             margin: 0 15px;
             text-decoration: none;
             color: #555;
             font-weight: bold;
             position: relative;
+            padding: 5px 0;
+            transition: color 0.3s ease;
         }
         nav a:hover {
-            color: #000;
+            color: #3498db;
         }
         nav a::before {
             content: '•';
@@ -56,6 +71,19 @@
             content: '';
             margin-right: 0;
         }
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #3498db;
+            transition: width 0.3s ease;
+        }
+        nav a:hover::after {
+            width: 100%;
+        }
         .divider {
             border-top: 1px solid #ddd;
             margin: 20px 0;
@@ -63,11 +91,24 @@
         .research-section {
             margin: 30px 0;
         }
+        /* H2 inside research-section */
+        .research-section > h2 {
+             font-size: 2em; /* Example: Make section title larger */
+             color: #2c3e50;
+             text-align: center;
+             margin-bottom: 30px;
+             font-weight: bold; /* Make it bold like index.html h2 */
+        }
         .research-area {
             margin-bottom: 50px;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
+            background-color: #fff; /* Add background to areas */
+            padding: 30px; /* Add padding */
+            border-radius: 8px; /* Add rounded corners */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Add subtle shadow */
+            border: 1px solid #e0e0e0; /* Add light border */
         }
         .research-area:nth-child(even) {
             flex-direction: row-reverse;
@@ -75,19 +116,19 @@
         .research-text {
             flex: 1;
             min-width: 300px;
-            padding: 20px;
+            /* padding: 20px; */ /* Padding moved to parent .research-area */
         }
         .research-image {
             flex: 1;
             min-width: 300px;
             text-align: center;
-            padding: 20px;
+            padding: 0 20px; /* Adjust padding if needed */
         }
         .research-image img {
             max-width: 100%;
             height: auto;
             border-radius: 5px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            /* box-shadow: 0 5px 15px rgba(0,0,0,0.1); */ /* Shadow moved to parent */
         }
         .research-title {
             font-size: 1.8em;
@@ -96,52 +137,84 @@
         }
         .research-description {
             text-align: justify;
+            color: #555; /* Slightly darker text */
         }
         .research-highlights {
             margin-top: 20px;
             padding-left: 20px;
+            color: #666; /* Lighter color for highlights */
         }
         .research-highlights li {
             margin-bottom: 10px;
         }
         footer {
             text-align: center;
-            padding: 20px 0;
-            margin-top: 30px;
-            border-top: 1px solid #ddd;
-            color: #777;
+            padding: 25px 0; /* Consistent with index.html */
+            margin-top: 40px; /* Consistent with index.html */
+            border-top: 1px solid #e0e0e0; /* Consistent border */
+            color: #888; /* Consistent color */
+            font-size: 0.9em; /* Consistent size */
+        }
+        footer p {
+             margin: 5px 0;
         }
         @media (max-width: 768px) {
             .research-area, .research-area:nth-child(even) {
                 flex-direction: column;
+                padding: 20px; /* Adjust padding on mobile */
             }
             .research-text, .research-image {
                 min-width: 100%;
+                padding: 10px 0; /* Adjust padding */
+            }
+            .research-title {
+                 font-size: 1.5em;
+            }
+            .research-section > h2 {
+                 font-size: 1.7em;
             }
         }
+         @media (max-width: 480px) {
+             .container {
+                 width: 95%;
+                 padding: 15px;
+             }
+             nav a {
+                 margin: 0 8px;
+                 font-size: 0.9em;
+             }
+             nav a::before {
+                 margin-right: 5px;
+             }
+             .research-area {
+                 padding: 15px;
+             }
+         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
             <h1>DNA Storage Lab</h1>
+            <!-- Kept h2 style from original research.html -->
             <h2>BGI Research</h2>
         </header>
-        
+
         <nav>
             <a href="index.html">Home</a>
             <a href="people.html">People</a>
             <a href="research.html">Research</a>
             <a href="publications.html">Publications</a>
+            <a href="positions.html">Positions</a> <!-- Assuming this link exists -->
             <a href="media.html">Media</a>
         </nav>
-        
+
         <div class="divider"></div>
-        
+
         <div class="research-section">
             <h2>Research Areas</h2>
-            <p>Our laboratory focuses on cutting-edge research in DNA molecular storage and DNA nanotechnology, dedicated to exploring the potential of DNA as an information storage medium and developing innovative storage technologies based on DNA nanostructures.</p>
-            
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px auto; color: #666;">Our laboratory focuses on cutting-edge research in DNA molecular storage and DNA nanotechnology, dedicated to exploring the potential of DNA as an information storage medium and developing innovative storage technologies based on DNA nanostructures.</p>
+
             <div class="research-area">
                 <div class="research-text">
                     <h3 class="research-title">DNA Data Storage Systems</h3>
@@ -156,13 +229,15 @@
                     </div>
                 </div>
                 <div class="research-image">
-                    <img src="images/DNA存储.png" alt="DNA数据存储系统示意图">
+                    <img src="images/DNA存储.png" alt="DNA Data Storage System Diagram">
                 </div>
             </div>
-            
 
-            
             <div class="research-area">
+                <!-- Reversed order due to :nth-child(even) -->
+                <div class="research-image">
+                    <img src="images/DNA纳米结构.png" alt="DNA Nanostructure Diagram">
+                </div>
                 <div class="research-text">
                     <h3 class="research-title">Applications of DNA Nanotechnology in Storage</h3>
                     <div class="research-description">
@@ -175,14 +250,11 @@
                         </ul>
                     </div>
                 </div>
-                <div class="research-image">
-                    <img src="images/DNA纳米结构.png" alt="DNA纳米结构示意图">
-                </div>
             </div>
         </div>
-        
+
         <footer>
-            <p>&copy; 2024 DNA Storage Lab | BGI Research</p>
+            <p>© 2024 DNA Storage Lab | BGI Research</p>
             <p>Address: Beishan Industrial Zone, Yantian District, Shenzhen</p>
         </footer>
     </div>

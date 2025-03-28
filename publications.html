@@ -5,19 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publications - DNA Storage Lab</title>
     <style>
+        /* === Base Styles (Consistent with index.html) === */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            margin: 0; padding: 0; line-height: 1.6; color: #333; background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7; /* Consistent line height */
+            color: #333;
+            background-color: #f8f9fa;
         }
-        .container { width: 90%; max-width: 1000px; margin: 0 auto; padding: 20px; }
-        header { text-align: center; padding: 20px 0; border-bottom: 1px solid #e0e0e0; margin-bottom: 30px; }
-        h1 { font-size: 2.3em; margin-bottom: 5px; color: #2c3e50; }
-        h2 { font-size: 1.4em; color: #555; font-weight: normal; margin-top: 0; }
+        .container {
+            width: 90%;
+            max-width: 1000px; /* Max width for publication list readability */
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-        /* --- Reverted Navigation Styles --- */
+        /* === Header (Consistent with index.html) === */
+        header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #e0e0e0; /* Lighter border */
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5em; /* Match index.html */
+            margin-bottom: 5px;
+            color: #2c3e50;
+            letter-spacing: -0.5px;
+        }
+        /* Subtitle under main H1 */
+        header h2 {
+            font-size: 1.5em; /* Match index.html */
+            color: #555;
+            font-weight: bold; /* Match index.html */
+            margin-top: 0;
+            letter-spacing: -0.3px;
+        }
+
+        /* === Navigation (Identical to index.html) === */
         nav {
             text-align: center;
             padding: 20px 0;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         nav a {
             margin: 0 15px;
@@ -25,9 +58,11 @@
             color: #555;
             font-weight: bold;
             position: relative;
+            padding: 5px 0;
+            transition: color 0.3s ease;
         }
         nav a:hover {
-            color: #000;
+            color: #3498db;
         }
         nav a::before {
             content: '•';
@@ -38,53 +73,213 @@
             content: '';
             margin-right: 0;
         }
-        /* --- End Reverted Navigation Styles --- */
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #3498db;
+            transition: width 0.3s ease;
+        }
+        nav a:hover::after {
+            width: 100%;
+        }
 
-        .divider { border-top: 1px solid #e0e0e0; margin: 25px 0; }
-        .publications-section { margin: 30px 0; }
-        .publication-list { list-style-type: none; padding: 0; }
+        /* === Divider (Consistent with index.html) === */
+        .divider {
+            border-top: 1px solid #e0e0e0; /* Lighter border */
+            margin: 20px 0;
+        }
 
+        /* === Publications Section Styling === */
+        .publications-section {
+            margin: 30px 0;
+        }
+        /* Section Title */
+        .publications-section > h2 {
+             font-size: 2em; /* Prominent section title */
+             color: #2c3e50;
+             text-align: center;
+             margin-bottom: 35px; /* More space before filters */
+             font-weight: bold;
+        }
+
+        /* Filter Controls Styling */
+        .filter-controls {
+            margin-bottom: 35px; /* More space after filters */
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px; /* Slightly larger gap */
+            justify-content: center;
+        }
+        .filter-button {
+            padding: 8px 18px; /* Slightly more padding */
+            background-color: #ffffff;
+            border: 1px solid #ccc; /* Slightly darker border */
+            border-radius: 20px; /* More rounded */
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 0.9em;
+            color: #555;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* Subtle shadow */
+        }
+        .filter-button:hover {
+            background-color: #f0f0f0;
+            border-color: #bbb;
+            color: #333;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+        }
+        /* Active filter button - Using theme accent color */
+        .filter-button.active {
+            background-color: #3498db; /* Changed to theme blue */
+            color: white;
+            border-color: #3498db; /* Match background */
+            box-shadow: 0 3px 8px rgba(52, 152, 219, 0.3); /* Blue shadow */
+        }
+
+        /* Publication List Styling */
+        .publication-list {
+            list-style-type: none;
+            padding: 0;
+        }
         .publication-item {
-            position: relative; padding: 20px 20px 20px 30px; margin-bottom: 20px;
-            background-color: #ffffff; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-            transition: box-shadow 0.3s ease, transform 0.3s ease; border-left: none;
+            position: relative;
+            padding: 20px 25px 20px 35px; /* Adjusted padding */
+            margin-bottom: 20px;
+            background-color: #ffffff;
+            border-radius: 8px; /* Slightly larger radius */
+            box-shadow: 0 3px 10px rgba(0,0,0,0.07); /* Slightly more pronounced shadow */
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+            border-left: none; /* Keep left border removed */
         }
-        .publication-item:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0,0,0,0.09); }
+        .publication-item:hover {
+            transform: translateY(-4px); /* Slightly more lift */
+            box-shadow: 0 7px 18px rgba(0,0,0,0.1);
+        }
+        /* Colored indicator using ::before */
         .publication-item::before {
-            content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 5px;
-            border-radius: 6px 0 0 6px; transition: background-color 0.3s ease;
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 6px; /* Slightly thicker */
+            border-radius: 8px 0 0 8px; /* Match parent radius */
+            transition: background-color 0.3s ease;
         }
-        .journal-item::before { background-color: #e74c3c; }
-        .patent-item::before { background-color: #5dade2; }
+        /* Consistent colors for types */
+        .journal-item::before { background-color: #e74c3c; } /* Red for Journal */
+        .patent-item::before { background-color: #5dade2; } /* Blue for Patent */
 
+        /* Type Tag Styling */
         .publication-type-tag {
-            display: inline-block; color: white; padding: 4px 10px; border-radius: 4px;
-            font-size: 0.8em; font-weight: bold; margin-bottom: 12px; line-height: 1.3; vertical-align: top;
+            display: inline-block;
+            color: white;
+            padding: 5px 12px; /* More padding */
+            border-radius: 5px;
+            font-size: 0.75em; /* Slightly smaller */
+            font-weight: bold;
+            margin-bottom: 15px; /* More space below tag */
+            line-height: 1.3;
+            vertical-align: top;
+            text-transform: uppercase; /* Uppercase for emphasis */
+            letter-spacing: 0.5px;
         }
         .publication-type-tag.journal-tag { background-color: #e74c3c; }
         .publication-type-tag.patent-tag { background-color: #5dade2; }
 
-        .publication-title { font-weight: 600; font-size: 1.1em; margin-bottom: 8px; color: #2c3e50; }
-        .publication-authors { margin-bottom: 10px; font-size: 0.95em; color: #555; }
-        .journal-item .publication-journal { color: #777; margin-bottom: 10px; font-size: 0.9em; }
-        .journal-item .publication-doi { font-size: 0.9em; color: #666; }
-        .journal-item .publication-doi a { color: #3498db; text-decoration: none; transition: color 0.2s ease; }
-        .journal-item .publication-doi a:hover { color: #2980b9; text-decoration: underline; }
-        .patent-item .patent-details { margin-top: 10px; font-size: 0.9em; color: #555; line-height: 1.6; }
-        .patent-item .patent-details span { display: block; margin-bottom: 5px; }
-        .patent-item .patent-details strong { font-weight: 500; color: #444; min-width: 120px; display: inline-block; }
-
-        .filter-controls { margin-bottom: 30px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
-        .filter-button { padding: 8px 16px; background-color: #fff; border: 1px solid #ddd; border-radius: 18px; cursor: pointer; transition: all 0.3s ease; font-weight: 500; font-size: 0.9em; }
-        .filter-button:hover { background-color: #f0f0f0; border-color: #ccc; color: #333; }
-        .filter-button.active { background-color: #e74c3c; color: white; border-color: #e74c3c; box-shadow: 0 3px 8px rgba(231, 76, 60, 0.3); }
-
-        footer { text-align: center; padding: 25px 0; margin-top: 40px; border-top: 1px solid #e0e0e0; color: #888; font-size: 0.9em; }
-        footer p { margin: 5px 0; }
-        @media (max-width: 768px) {
-            .filter-controls { gap: 8px; }
-            .publication-item { padding: 15px 15px 15px 25px; }
+        /* Content within item */
+        .publication-title {
+            font-weight: 600;
+            font-size: 1.15em; /* Slightly larger title */
+            margin-bottom: 10px;
+            color: #2c3e50;
         }
+        .publication-authors {
+            margin-bottom: 12px;
+            font-size: 0.95em;
+            color: #555;
+            font-style: italic; /* Italicize authors */
+        }
+        .journal-item .publication-journal {
+            color: #777;
+            margin-bottom: 10px;
+            font-size: 0.9em;
+        }
+        .journal-item .publication-doi {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .journal-item .publication-doi a {
+            color: #3498db; /* Theme accent color */
+            text-decoration: none;
+            transition: color 0.2s ease, text-decoration 0.2s ease;
+        }
+        .journal-item .publication-doi a:hover {
+            color: #2980b9; /* Darker blue */
+            text-decoration: underline;
+        }
+        .patent-item .patent-details {
+            margin-top: 12px;
+            font-size: 0.9em;
+            color: #555;
+            line-height: 1.7; /* Increased line height */
+        }
+        .patent-item .patent-details span {
+            display: block;
+            margin-bottom: 6px;
+        }
+        .patent-item .patent-details strong {
+            font-weight: 600;
+            color: #444;
+            min-width: 130px; /* Adjusted min-width */
+            display: inline-block;
+        }
+        /* Message for no matches */
+        .no-match-message {
+            text-align: center;
+            color: #888;
+            padding: 30px 20px;
+            box-shadow: none;
+            border: none;
+            background: none;
+            font-style: italic;
+        }
+
+        /* === Footer (Consistent with index.html) === */
+        footer {
+            text-align: center;
+            padding: 25px 0;
+            margin-top: 40px;
+            border-top: 1px solid #e0e0e0;
+            color: #888;
+            font-size: 0.9em;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* === Responsive Styles === */
+        @media (max-width: 768px) {
+            .container { width: 95%; }
+            h1 { font-size: 2em; }
+            .publications-section > h2 { font-size: 1.7em; }
+            .filter-controls { gap: 8px; }
+            .filter-button { padding: 7px 14px; font-size: 0.85em; }
+            .publication-item { padding: 15px 20px 15px 25px; }
+        }
+         @media (max-width: 480px) {
+             nav a { margin: 0 8px; font-size: 0.9em; }
+             nav a::before { margin-right: 5px; }
+             .filter-button { padding: 6px 12px; font-size: 0.8em; }
+             .publication-title { font-size: 1.05em; }
+             .publication-authors { font-size: 0.9em; }
+             .publication-item::before { width: 5px; } /* Adjust indicator width */
+             .publication-item { padding: 15px 15px 15px 25px; }
+         }
     </style>
 </head>
 <body>
@@ -99,6 +294,7 @@
             <a href="people.html">People</a>
             <a href="research.html">Research</a>
             <a href="publications.html">Publications</a>
+            <a href="positions.html">Positions</a> <!-- Assuming this link exists -->
             <a href="media.html">Media</a>
         </nav>
 
@@ -121,7 +317,8 @@
             </div>
 
             <ul class="publication-list" id="publicationList">
-                <li style="text-align: center; color: #888; box-shadow: none; border: none; background: none;">Loading...</li>
+                <!-- Loading indicator -->
+                <li style="text-align: center; color: #888; box-shadow: none; border: none; background: none; padding: 20px;">Loading publications...</li>
             </ul>
         </div>
 
@@ -132,9 +329,16 @@
     </div>
 
      <script>
+        // ==================================================
+        // JavaScript for loading and filtering publications
+        // --- THIS SECTION REMAINS UNCHANGED ---
+        // ==================================================
         async function loadPublications() {
             const publicationList = document.getElementById('publicationList');
             if (!publicationList) return;
+
+            // Clear loading message immediately
+            publicationList.innerHTML = '';
 
             try {
                 const [journalsResponse, patentsResponse] = await Promise.all([
@@ -142,20 +346,25 @@
                     fetch('./publication/patent.json')
                 ]);
 
-                if (!journalsResponse.ok) throw new Error(`Failed to load journal.json: ${journalsResponse.statusText}`);
-                if (!patentsResponse.ok) throw new Error(`Failed to load patent.json: ${patentsResponse.statusText}`);
+                // Check responses after Promise.all resolves
+                if (!journalsResponse.ok) throw new Error(`Failed to load journal.json: ${journalsResponse.status} ${journalsResponse.statusText}`);
+                if (!patentsResponse.ok) throw new Error(`Failed to load patent.json: ${patentsResponse.status} ${patentsResponse.statusText}`);
 
+                // Parse JSON data
                 const journals = await journalsResponse.json();
                 const patents = await patentsResponse.json();
 
-                publicationList.innerHTML = '';
+                let itemsAdded = 0; // Counter for added items
 
+                // Process Journals
                 if (Array.isArray(journals)) {
                     journals.forEach(journal => {
                         const li = document.createElement('li');
                         li.className = 'publication-item journal-item';
                         li.setAttribute('data-type', 'journal');
-                        li.setAttribute('data-year', journal.PY || '');
+                        // Ensure PY exists and is a string/number before setting data-year
+                        const year = (journal.PY !== null && journal.PY !== undefined) ? String(journal.PY).trim() : '';
+                        li.setAttribute('data-year', year);
 
                         li.innerHTML = `
                             <span class="publication-type-tag journal-tag">Journal</span>
@@ -167,27 +376,32 @@
                             </div>
                         `;
                         publicationList.appendChild(li);
+                        itemsAdded++;
                     });
                 } else {
                      console.warn("journal.json data is not a valid array or is empty");
                 }
 
+                // Process Patents
                  if (Array.isArray(patents)) {
                     patents.forEach(patent => {
                         const li = document.createElement('li');
                         li.className = 'publication-item patent-item';
                         li.setAttribute('data-type', 'patent');
 
+                        // Improved year extraction logic
                         let year = '';
-                        const yearMatch = patent.专利号 ? patent.专利号.match(/20[0-9]{2}/) : null;
-                        if (yearMatch) {
-                            year = yearMatch[0];
-                        } else if (patent.申请日期) {
+                        if (patent.专利号 && typeof patent.专利号 === 'string') {
+                            const yearMatch = patent.专利号.match(/20[0-9]{2}/);
+                            if (yearMatch) year = yearMatch[0];
+                        }
+                        if (!year && patent.申请日期 && typeof patent.申请日期 === 'string') {
                             year = patent.申请日期.substring(0, 4);
-                        } else if (patent.授权公告日) {
+                        }
+                        if (!year && patent.授权公告日 && typeof patent.授权公告日 === 'string') {
                              year = patent.授权公告日.substring(0, 4);
                         }
-                        li.setAttribute('data-year', year);
+                        li.setAttribute('data-year', year); // Set year even if empty
 
                         li.innerHTML = `
                             <span class="publication-type-tag patent-tag">Patent</span>
@@ -196,40 +410,54 @@
                                 <span class="patent-number"><strong>Patent Number:</strong> ${patent.专利号 || 'Unknown'}</span>
                                 ${patent.申请日期 ? `<span class="patent-date"><strong>Application Date:</strong> ${patent.申请日期}</span>` : ''}
                                 ${patent.授权公告日 ? `<span class="patent-date"><strong>Grant Date:</strong> ${patent.授权公告日}</span>` : ''}
-                                <span class="patent-status"><strong>Status:</strong> ${patent.状态 || 'Pending'}</span>
+                                <span class="patent-status"><strong>Status:</strong> ${patent.状态 || 'Unknown'}</span>
                             </div>
                         `;
                         publicationList.appendChild(li);
+                        itemsAdded++;
                     });
                 } else {
                      console.warn("patent.json data is not a valid array or is empty");
                 }
 
-                 if (publicationList.children.length === 0) {
-                    publicationList.innerHTML = '<li style="text-align: center; color: #888; box-shadow: none; border: none; background: none;">No publications or patents found.</li>';
+                 // Display message if no items were added
+                 if (itemsAdded === 0) {
+                    publicationList.innerHTML = '<li style="text-align: center; color: #888; box-shadow: none; border: none; background: none; padding: 20px;">No publications or patents found.</li>';
                  }
 
-                 initializeFiltering();
+                 // Initialize filtering only if items were added
+                 if (itemsAdded > 0) {
+                    initializeFiltering();
+                 }
 
             } catch (error) {
                 console.error('Error loading publication data:', error);
-                 if(publicationList) publicationList.innerHTML = `<li style="text-align: center; color: #cc0000; box-shadow: none; border: none; background: none;">Failed to load data: ${error.message}</li>`;
+                 // Display error in the list area
+                 if(publicationList) publicationList.innerHTML = `<li style="text-align: center; color: #cc0000; box-shadow: none; border: none; background: none; padding: 20px;">Failed to load data. Please check the console or contact support.<br><small>${error.message}</small></li>`;
             }
         }
 
         function initializeFiltering() {
             const filterButtons = document.querySelectorAll('.filter-button');
             const publicationList = document.getElementById('publicationList');
+            // Ensure items are selected *after* they are potentially added
             const publicationItems = publicationList.querySelectorAll('.publication-item');
 
-            if (publicationItems.length === 0) return;
+            if (!publicationList || publicationItems.length === 0) {
+                console.log("No items to filter or list element not found.");
+                return; // Exit if no items or list
+            }
 
+            // Attach event listeners
             filterButtons.forEach(button => {
+                // Remove potential old listeners before adding new ones
                 button.removeEventListener('click', handleFilterClick);
                 button.addEventListener('click', handleFilterClick);
             });
 
+             // Apply default filter ('all')
              filterItems('all', publicationItems);
+             // Set 'All' button as active initially
              document.querySelector('.filter-button.active')?.classList.remove('active');
              document.querySelector('.filter-button[data-filter="all"]')?.classList.add('active');
         }
@@ -240,29 +468,58 @@
              const publicationList = document.getElementById('publicationList');
              const publicationItems = publicationList.querySelectorAll('.publication-item');
 
+             // Update active button state
              filterButtons.forEach(btn => btn.classList.remove('active'));
              button.classList.add('active');
 
+             // Get filter value and apply filter
              const filter = button.getAttribute('data-filter');
              filterItems(filter, publicationItems);
         }
 
         function filterItems(filter, items) {
+            let visibleCount = 0;
             items.forEach(item => {
                 const type = item.getAttribute('data-type');
                 const year = item.getAttribute('data-year');
 
                 let show = false;
+                // Logic: Show if filter is 'all', or matches type, or matches year (and year exists)
                 if (filter === 'all' || filter === type || (filter === year && year)) {
                     show = true;
                 }
 
                 item.style.display = show ? '' : 'none';
+                if (show) visibleCount++;
             });
+
+            // Optional: Display a message if no items match the filter
+            const listElement = document.getElementById('publicationList');
+            let noMatchMessage = listElement.querySelector('.no-match-message');
+            if (visibleCount === 0 && filter !== 'all') {
+                if (!noMatchMessage) {
+                    noMatchMessage = document.createElement('li');
+                    noMatchMessage.className = 'no-match-message';
+                    // Apply styles via class or inline
+                    noMatchMessage.style.textAlign = 'center';
+                    noMatchMessage.style.color = '#888';
+                    noMatchMessage.style.padding = '30px 20px'; // Match class style
+                    noMatchMessage.style.boxShadow = 'none';
+                    noMatchMessage.style.border = 'none';
+                    noMatchMessage.style.background = 'none';
+                    noMatchMessage.style.fontStyle = 'italic'; // Match class style
+                    listElement.appendChild(noMatchMessage);
+                }
+                noMatchMessage.textContent = `No items match the filter "${filter}".`;
+                noMatchMessage.style.display = ''; // Ensure it's visible
+            } else if (noMatchMessage) {
+                noMatchMessage.style.display = 'none'; // Hide message if items are visible or filter is 'all'
+            }
         }
 
+        // Load publications when the DOM is ready
         window.addEventListener('DOMContentLoaded', loadPublications);
-
+        // --- END OF UNCHANGED JAVASCRIPT ---
      </script>
 
 </body>

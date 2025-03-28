@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positions - DNA Storage Lab</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 5px;
+            color: #2c3e50;
+            letter-spacing: -0.5px;
+        }
+        h2 {
+            font-size: 1.5em;
+            color: #555;
+            font-weight: bold;
+            margin-top: 0;
+            letter-spacing: -0.3px;
+        }
+        nav {
+            text-align: center;
+            padding: 20px 0;
+            margin-bottom: 10px;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #555;
+            font-weight: bold;
+            position: relative;
+            padding: 5px 0;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #3498db;
+        }
+        nav a::before {
+            content: '•';
+            margin-right: 10px;
+            color: #999;
+        }
+        nav a:first-child::before {
+            content: '';
+            margin-right: 0;
+        }
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #3498db;
+            transition: width 0.3s ease;
+        }
+        nav a:hover::after {
+            width: 100%;
+        }
+        .divider {
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+        }
+        .position-section {
+            margin-bottom: 40px;
+        }
+        .position-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .position-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+            display: flex;
+            flex-direction: column;
+        }
+        .position-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+            border-color: #3498db;
+        }
+        .position-info {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .position-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin: 0 0 8px 0;
+            color: #2c3e50;
+        }
+        .position-type {
+            color: #3498db;
+            font-style: italic;
+            margin: 0 0 12px 0;
+            padding: 0 0 8px 0;
+            font-weight: 500;
+            border-bottom: 1px dashed #eee;
+        }
+        .position-location {
+            font-size: 0.95em;
+            margin-bottom: 12px;
+            color: #555;
+        }
+        .position-duration {
+            font-size: 0.95em;
+            margin-bottom: 12px;
+            color: #555;
+        }
+        .position-disciplines {
+            font-size: 0.95em;
+            margin-bottom: 12px;
+            color: #555;
+        }
+        .position-responsibilities {
+            font-size: 0.9em;
+            color: #666;
+            margin: 0;
+            padding: 10px 0;
+            border-top: 1px solid #eee;
+        }
+        .position-responsibilities ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+        .position-qualifications {
+            font-size: 0.9em;
+            color: #666;
+            margin: 0;
+            padding: 10px 0;
+            border-top: 1px solid #eee;
+        }
+        .position-qualifications ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+        .position-apply {
+            margin-top: auto;
+            text-align: center;
+        }
+        .apply-button {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .apply-button:hover {
+            background-color: #2980b9;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+            border-top: 1px solid #ddd;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>DNA Storage Lab</h1>
+            <h2>BGI Research</h2>
+        </header>
+        
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="people.html">People</a>
+            <a href="research.html">Research</a>
+            <a href="publications.html">Publications</a>
+            <a href="positions.html">Positions</a>
+            <a href="media.html">Media</a>
+        </nav>
+        
+        <div class="divider"></div>
+        
+        <div class="position-section">
+            <h2>Open Positions</h2>
+            <p>Join our team and contribute to cutting-edge research in DNA storage and DNA nanotechnology.</p>
+            <div class="position-grid" id="position-grid"></div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2024 DNA Storage Lab | BGI Research</p>
+            <p>Address: Beishan Industrial Zone, Yantian District, Shenzhen</p>
+        </footer>
+    </div>
+
+    <script>
+        async function loadPositions() {
+            try {
+                const response = await fetch('position/position.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const positions = await response.json();
+                const positionGrid = document.getElementById('position-grid');
+                if (!positionGrid) return;
+                
+                positionGrid.innerHTML = '';
+                
+                if (Array.isArray(positions) && positions.length > 0) {
+                    positions.forEach(position => {
+                        const positionCard = document.createElement('div');
+                        positionCard.className = 'position-card';
+                        
+                        // 准备职位类型显示
+                        const positionType = position.position_type && Array.isArray(position.position_type) ? 
+                            position.position_type.join(', ') : 'Not specified';
+                        
+                        // 准备职责列表
+                        let responsibilitiesHTML = '';
+                        if (position.responsibilities && Array.isArray(position.responsibilities) && position.responsibilities.length > 0) {
+                            responsibilitiesHTML = `
+                            <div class="position-responsibilities">
+                                <h4>Responsibilities:</h4>
+                                <ul>
+                                    ${position.responsibilities.map(resp => `<li>${resp}</li>`).join('')}
+                                </ul>
+                            </div>`;
+                        }
+                        
+                        // 准备资格要求列表
+                        let qualificationsHTML = '';
+                        if (position.qualifications && Array.isArray(position.qualifications) && position.qualifications.length > 0) {
+                            qualificationsHTML = `
+                            <div class="position-qualifications">
+                                <h4>Qualifications:</h4>
+                                <ul>
+                                    ${position.qualifications.map(qual => `<li>${qual}</li>`).join('')}
+                                </ul>
+                            </div>`;
+                        }
+                        
+                        // 准备所需学科列表
+                        const disciplines = position.required_disciplines && Array.isArray(position.required_disciplines) ? 
+                            position.required_disciplines.join(', ') : 'Not specified';
+                        
+                        // 准备位置信息
+                        const locationText = position.location ? 
+                            `${position.location.province || ''} ${position.location.city || ''}`.trim() : 'Not specified';
+                        
+                        positionCard.innerHTML = `
+                        <div class="position-info">
+                            <div class="position-title">${position.job_title || 'Position'}</div>
+                            <div class="position-type">${positionType}</div>
+                            <div class="position-location"><strong>Location:</strong> ${locationText}</div>
+                            <div class="position-duration"><strong>Duration:</strong> ${position.duration || 'Not specified'}</div>
+                            <div class="position-disciplines"><strong>Required Disciplines:</strong> ${disciplines}</div>
+                            ${responsibilitiesHTML}
+                            ${qualificationsHTML}
+                            <div class="position-apply">
+                                <a href="${position.source_url || '#'}" class="apply-button" target="_blank">Apply Now</a>
+                            </div>
+                        </div>`;
+                        
+                        positionGrid.appendChild(positionCard);
+                    });
+                } else {
+                    positionGrid.innerHTML = '<p>No open positions available at this time.</p>';
+                }
+            } catch (error) {
+                console.error('Error loading positions:', error);
+                const positionGrid = document.getElementById('position-grid');
+                if (positionGrid) {
+                    positionGrid.innerHTML = `<p style="color: red;">Failed to load positions. ${error.message}</p>`;
+                }
+            }
+        }
+
+        // 页面加载时执行
+        document.addEventListener('DOMContentLoaded', loadPositions);
+    </script>
+</body>
+</html>

@@ -1,114 +1,160 @@
 [
   {
-    "姓名": "平质",
-    "最高学位": "博士",
-    "职务": "副研究员",
+    "姓名": "Ping Zhi",
+    "最高学位": "Ph.D.",
+    "职务": "Associate Research Fellow",
     "email": "pingzhi@cuhk.edu.cn",
-    "工作地址": "香港中文大学（深圳）",
+    "工作地址": "The Chinese University of Hong Kong, Shenzhen",
     "照片地址": "images/平质.png",
     "教育经历": [
-      {"学位": "博士", "学校": "南洋理工大学"},
-      {"学位": "学士", "学校": "南洋理工大学"}
+      {"学位": "Ph.D.", "学校": "Nanyang Technological University"},
+      {"学位": "Bachelor's", "学校": "Nanyang Technological University"}
     ],
     "工作经历": [
-      {"机构": "深圳华大生命科学研究院", "职务": "主任科学家、副研究员", "时间": "2017年至2024年"}
+      {"机构": "BGI Research, Shenzhen", "职务": "Principal Investigator, Associate Research Fellow", "时间": "2017 to 2024"}
     ],
     "研究兴趣": [
-      "DNA数据存储 (编码算法, 集成系统与流程开发)",
-      "生物信息学 (合成生物学中的应用)",
-      "DNA合成技术",
-      "合成生物学",
-      "BT-IT融合领域课题"
+      "DNA Data Storage (Encoding algorithms, Integrated system and process development)",
+      "Bioinformatics (Applications in synthetic biology)",
+      "DNA Synthesis Technology",
+      "Synthetic Biology",
+      "Topics in the Convergence of Biotechnology (BT) and Information Technology (IT)"
     ],
     "身份标签": "职工"
   },
   {
-    "姓名": "王雯",
-    "最高学位": "博士",
-    "职务": "副研究员",
+    "姓名": "Wang Wen",
+    "最高学位": "Ph.D.",
+    "职务": "Associate Research Fellow",
     "email": "wangwen4@genomics.cn",
-    "工作地址": "深圳华大生命科学研究院",
+    "工作地址": "BGI Research, Shenzhen",
     "照片地址": "images/王雯.jpg",
     "教育经历": [
-      {"学位": "博士", "学校": "香港科技大学"},
-      {"学位": "学士", "学校": "浙江大学"}
+      {"学位": "Ph.D.", "学校": "The Hong Kong University of Science and Technology"},
+      {"学位": "Bachelor's", "学校": "Zhejiang University"}
     ],
     "工作经历": [
-      {"机构": "深圳华大生命科学研究院", "部门": "生物化学技术研究所 / 合成生物学平台", "职务": "副研究员", "时间": "2022-01至今"},
-      {"机构": "清华大学", "部门": "生命科学学院", "职务": "博士后", "时间": "2016-12至2021-12"}
+      {"机构": "BGI Research, Shenzhen", "部门": "Institute of Biochemical Technology / Synthetic Biology Platform", "职务": "Associate Research Fellow", "时间": "2022-01 to Present"},
+      {"机构": "Tsinghua University", "部门": "School of Life Sciences", "职务": "Postdoctoral Fellow", "时间": "2016-12 to 2021-12"}
     ],
     "研究兴趣": [
-      "新型DNA自组装方式的拓展与功能化开发",
-      "核酸纳米技术在DNA数字存储领域的应用",
-      "DNA纳米技术在功能材料的自组装方面的应用"
+      "Exploration and Functionalization of Novel DNA Self-Assembly Methods",
+      "Application of Nucleic Acid Nanotechnology in DNA Digital Storage",
+      "Application of DNA Nanotechnology in the Self-Assembly of Functional Materials"
     ],
     "身份标签": "职工"
   },
   {
-    "姓名": "刘德瑞霖",
-    "最高学位": "博士",
-    "职务": "联培学生",
+    "姓名": "Liu Deruilin",
+    "最高学位": "Ph.D.",
+    "职务": "Joint Training Student",
     "email": "liuderuilin@genomics.cn",
-    "工作地址": "深圳华大生命科学研究院",
+    "工作地址": "BGI Research, Shenzhen",
     "照片地址": "images/ruilin.jpg",
     "教育经历": [
-      {"学位": "学士", "学校": "西北大学"},
-      {"学位": "博士在读", "学校": "中国科学院大学"}
+      {"学位": "Bachelor's", "学校": "Northwest University"},
+      {"学位": "Ph.D. Student", "学校": "University of Chinese Academy of Sciences"}
     ],
     "工作经历": [
-      {"机构": "深圳华大生命科学研究院", "职务": "联培学生", "时间": null} 
+      {"机构": "BGI Research, Shenzhen", "职务": "Joint Training Student", "时间": null}
     ],
     "研究兴趣": [],
     "身份标签": "博士"
   },
   {
-    "姓名": "韩涛",
-    "最高学位": "学士",
-    "职务": "客座学生",
+    "姓名": "Han Tao",
+    "最高学位": "Bachelor's",
+    "职务": "Visiting Student",
     "email": "202166280375@mail.scut.edu.cn",
-    "工作地址": "深圳华大生命科学研究院",
+    "工作地址": "BGI Research, Shenzhen",
     "照片地址": "images/韩涛.jpg",
     "教育经历": [
-      {"学位": "本科在读", "学校": "华南理工大学"}
+      {"学位": "Undergraduate Student", "学校": "South China University of Technology"}
     ],
     "工作经历": [
-      {"机构": "深圳华大生命科学研究院", "职务": "客座学生", "时间": "2025-01至今"}
+      {"机构": "BGI Research, Shenzhen", "职务": "Visiting Student", "时间": "2025-01 to Present"}
     ],
     "研究兴趣": [],
     "身份标签": "客座学生"
   },
   {
-    "姓名": "尹茁孝娃",
-    "最高学位": "硕士",
-    "职务": "联培学生",
+    "姓名": "Yin Zhuoxiaowa",
+    "最高学位": "Master's",
+    "职务": "Joint Training Student",
     "email": "yinzhuoxiaowa@genomics.cn",
-    "工作地址": "深圳华大生命科学研究院",
+    "工作地址": "BGI Research, Shenzhen",
     "照片地址": "images/xiaowa.png",
     "教育经历": [
-      {"学位": "学士", "学校": "xx大学"}, 
-      {"学位": "硕士在读", "学校": "中国科学院大学"}
+      {"学位": "Bachelor's", "学校": "XX University"},
+      {"学位": "Master's Student", "学校": "University of Chinese Academy of Sciences"}
     ],
     "工作经历": [
-      {"机构": "深圳华大生命科学研究院", "职务": "联培学生", "时间": "2023-09至今"}
+      {"机构": "BGI Research, Shenzhen", "职务": "Joint Training Student", "时间": "2023-09 to Present"}
     ],
     "研究兴趣": [],
     "身份标签": "硕士"
   },
   {
-    "姓名": "韦艳婕",
-    "最高学位": "硕士",
-    "职务": "联培学生",
+    "姓名": "Wei Yanjie",
+    "最高学位": "Master's",
+    "职务": "Joint Training Student",
     "email": "weiyanjie@genomics.cn",
-    "工作地址": "深圳华大生命科学研究院",
+    "工作地址": "BGI Research, Shenzhen",
     "照片地址": "images/yanjie.jpg",
     "教育经历": [
-      {"学位": "学士", "学校": "东南大学"},
-      {"学位": "硕士在读", "学校": "中国科学院大学"}
+      {"学位": "Bachelor's", "学校": "Southeast University"},
+      {"学位": "Master's Student", "学校": "University of Chinese Academy of Sciences"}
     ],
     "工作经历": [
-      {"机构": "深圳华大生命科学研究院", "职务": "联培学生", "时间": "2022-09至今"}
+      {"机构": "BGI Research, Shenzhen", "职务": "Joint Training Student", "时间": "2022-09 to Present"}
     ],
     "研究兴趣": [],
     "身份标签": "硕士"
+  },
+  {
+    "姓名": "Li Yiming",
+    "最高学位": "Master's",
+    "职务": "Assistant Research Fellow", 
+    "email": "liyiming1@genomics.cn",
+    "工作地址": "BGI Research, Shenzhen", 
+    "照片地址": "images/李一鸣.jpg", 
+    "教育经历": [
+      {"学位": "Bachelor's", "学校": "XX University"},
+      {"学位": "Master's", "学校": "XX University"} 
+    ],
+    "工作经历": [], 
+    "研究兴趣": [], 
+    "身份标签": "职工" 
+  },
+  {
+    "姓名": "Xu Demin",
+    "最高学位": "Ph.D.",
+    "职务": "Associate Research Fellow", 
+    "email": "xudemin@genomics.cn",
+    "工作地址": "BGI Research, Shenzhen", 
+    "照片地址": "images/徐德敏.jpg", 
+    "教育经历": [
+      {"学位": "Ph.D.", "学校": "XX University"},
+      {"学位": "Master's", "学校": "XX University"},
+      {"学位": "Bachelor's", "学校": "XX University"}
+    ], 
+    "工作经历": [], 
+    "研究兴趣": [], 
+    "身份标签": "职工" 
+  },
+  {
+    "姓名": "Tian Mengfan",
+    "最高学位": "Master's", 
+    "职务": "Joint Training Student", 
+    "email": "tianmengfan@genomics.cn",
+    "工作地址": "BGI Research, Shenzhen", 
+    "照片地址": "images/田梦凡.jpg",
+    "教育经历": [
+      {"学位": "Bachelor's", "学校": "XX University"},
+      {"学位": "Master's Student", "学校": "University of Chinese Academy of Sciences"} 
+    ],
+    "工作经历": [], 
+    "研究兴趣": [], 
+    "身份标签": "硕士" 
   }
 ]

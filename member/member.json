@@ -156,5 +156,19 @@
     "工作经历": [], 
     "研究兴趣": [], 
     "身份标签": "硕士" 
+  },
+  {
+    "姓名": "Peng sen",
+    "最高学位": "Bachelor's", 
+    "职务": "Distinguished Students", 
+    "email": "202166280375@mail.scut.edu.cn",
+    "工作地址": "Shenzhen University, Shenzhen", 
+    "照片地址": "images/三木.jpg",
+    "教育经历": [
+      {"学位": "Bachelor's", "学校": "Shenzhen University"},
+    ],
+    "工作经历": [], 
+    "研究兴趣": ["Management Visiting Student Han Tao"], 
+    "身份标签": "客座学生" 
   }
 ]
